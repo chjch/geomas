@@ -1,0 +1,19 @@
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: geomas-postgis:seed-gis-data
+    platform: linux/amd64
+    container_name: geomas-postgis
+    env_file:
+      - ../secrets/db/postgres.env
+    secrets:
+      - source: gcp_sa_key
+        target: gcp_sa_key
+    ports:
+      - "5432:5432"
+
+secrets:
+  gcp_sa_key:
+    file: ../secrets/gcp/jaxtwin-svc-key.json

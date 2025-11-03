@@ -1,0 +1,48 @@
+# Vector assets manifest
+# Lists vector layers to load from Google Cloud Storage using service account authentication
+#
+# NOTE: The service account (jaxtwin-svc@dcp-fiber.iam.gserviceaccount.com) must have
+# storage.objectViewer role on the bucket. The key is mounted at /run/secrets/gcp_sa_key
+
+vectors:
+  - name: parks
+    gs_path: "gs://jaxtwin-gis-assets-us/vectors/parks/parks"
+    srid: 4326
+    schema: vector
+    table: parks
+  - name: schools
+    gs_path: "gs://jaxtwin-gis-assets-us/vectors/schools/schools"
+    srid: 4326
+    schema: vector
+    table: schools
+  - name: roads
+    gs_path: "gs://jaxtwin-gis-assets-us/vectors/roads/roads"
+    srid: 4326
+    schema: vector
+    table: roads
+  - name: popemploy
+    gs_path: "gs://jaxtwin-gis-assets-us/vectors/popemploy/popemploy"
+    srid: 4326
+    schema: vector
+    table: popemploy
+  - name: transit_stops
+    gs_path: "gs://jaxtwin-gis-assets-us/vectors/transit_stops/transit_stops"
+    srid: 4326
+    schema: vector
+    table: transit_stops
+  - name: regional_activity_centers
+    gs_path: "gs://jaxtwin-gis-assets-us/vectors/regional_activity_centers/regional_activity_centers"
+    srid: 4326
+    schema: vector
+    table: regional_activity_centers
+  - name: equity
+    gs_path: "gs://jaxtwin-gis-assets-us/vectors/equity/equity"
+    srid: 4326
+    schema: vector
+    table: equity
+  - name: integrated_decision_units
+    gs_path: "gs://jaxtwin-gis-assets-us/vectors/integrated_decision_units/integrated_decision_units"
+    srid: 4326
+    schema: vector
+    table: integrated_decision_units
+
