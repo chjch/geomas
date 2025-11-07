@@ -25,7 +25,6 @@ ARG YQ_VERSION="v4.47.2"
 RUN curl -L "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq \
     && chmod +x /usr/local/bin/yq
 
-# Seed assetss
+# Seed assets
 COPY seed/ /docker-entrypoint-initdb.d/
 RUN chown -R postgres:postgres /docker-entrypoint-initdb.d
-RUN chmod -x /docker-entrypoint-initdb.d/10_postgis.sh
