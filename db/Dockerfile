@@ -28,3 +28,4 @@ RUN curl -L "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_
 # Seed assetss
 COPY seed/ /docker-entrypoint-initdb.d/
 RUN chown -R postgres:postgres /docker-entrypoint-initdb.d
+RUN chmod -x /docker-entrypoint-initdb.d/10_postgis.sh
