@@ -38,8 +38,8 @@
 2. Which block group (in `equity` table) have the highest cumulative nearby traffic?
    - **Related data:** `equity`, `roads`
    - **Geoprocessing steps:**
-     1. Perform a spatial join between `equity` block groups and `roads` (selecting roads that intersect each block group)
-     2. For each block group, sum the AADT values of all intersecting road segments
+     1. Perform a spatial join between `equity` block groups and `roads` (join condition is that for each block group, join roads that intersect with the block group or within a certain distance with the block group, e.g., 100 meters)
+     2. For each block group, sum the AADT values of all joined road segments
      3. Sort block groups by cumulative AADT in descending order
      4. Return the block groups with the highest cumulative traffic
 
@@ -48,9 +48,9 @@
 1. Which road segments traverse the highest-employment TAZs?
    - **Related data:** `roads`, `popemploy`
    - **Geoprocessing steps:**
-     1. Perform a spatial join between `roads` and `popemploy` TAZ polygons (the join condition is that roads that intersect TAZs)
-     2. Assign employment values from `popemploy` to each intersecting road segment
-     3. Sort road segments by the employment count of their intersecting TAZ in descending order
+     1. Perform a spatial join between `roads` and `popemploy` TAZ polygons (join condition is that for each segment of roads, join TAZs that intersect with the road segment)
+     2. Assign employment values from `popemploy` to each joined road segment
+     3. Sort road segments by the employment count of their joined TAZ in descending order
      4. Return the road segments traversing the highest-employment areas
 
 2. What is the transit stop density (stops per acre) for each RAC?
