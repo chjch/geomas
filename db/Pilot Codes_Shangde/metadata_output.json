@@ -1,0 +1,1116 @@
+{
+  "scan_timestamp": "2025-11-17T15:18:49.855190",
+  "scan_directory": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers",
+  "files": [
+    {
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\airport_port_everglades.shp",
+      "file_name": "airport_port_everglades.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-09-23T02:12:00",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 3300,
+        "readable": "3.22 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "OBJECTID",
+          "type": "int:10"
+        },
+        {
+          "name": "BPC_BCFUTU",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SLUC1",
+          "type": "int:10"
+        },
+        {
+          "name": "ACRES",
+          "type": "float:19.11"
+        },
+        {
+          "name": "DENSITY",
+          "type": "str:10"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "float:19.11"
+        }
+      ],
+      "sample_data": {
+        "OBJECTID": [
+          2542
+        ],
+        "BPC_BCFUTU": [
+          2342913.07364
+        ],
+        "SLUC1": [
+          70
+        ],
+        "ACRES": [
+          3153.17791427
+        ],
+        "DENSITY": [],
+        "SHAPE_AREA": [
+          137351880.536
+        ],
+        "SHAPE_LEN": [
+          100725.043342
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Calculate area",
+        "Dissolve by attribute",
+        "Union/Merge polygons",
+        "Simplify geometry",
+        "Calculate centroid",
+        "Zonal statistics (with raster)",
+        "Dissolve/Group by categorical attributes: DENSITY",
+        "Symbolize by categories: DENSITY",
+        "Calculate statistics for: OBJECTID, BPC_BCFUTU, SLUC1",
+        "Choropleth mapping by: OBJECTID, BPC_BCFUTU, SLUC1"
+      ],
+      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "geometry_type": "Polygon",
+      "feature_count": 1,
+      "bounds": [
+        929063.3436472602,
+        628657.785048686,
+        946881.4845200926,
+        643234.9842406884
+      ],
+      "bounds_latlon": {
+        "west": -80.16873062106264,
+        "south": 26.060802809274517,
+        "east": -80.11415788098923,
+        "north": 26.100582140131205,
+        "formatted": "West: -80.168731, South: 26.060803, East: -80.114158, North: 26.100582"
+      }
+    },
+    {
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\community_redevelopment_areas.shp",
+      "file_name": "community_redevelopment_areas.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-09-23T02:12:00",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 91092,
+        "readable": "88.96 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "PERIMETER",
+          "type": "float:19.8"
+        },
+        {
+          "name": "UPDATED",
+          "type": "date"
+        },
+        {
+          "name": "UPDATE_MET",
+          "type": "str:50"
+        },
+        {
+          "name": "NAME_GIS",
+          "type": "str:50"
+        },
+        {
+          "name": "ACREAGE",
+          "type": "float:19.8"
+        },
+        {
+          "name": "CITY",
+          "type": "str:25"
+        },
+        {
+          "name": "LAYOUT",
+          "type": "str:5"
+        },
+        {
+          "name": "NOTE",
+          "type": "str:50"
+        },
+        {
+          "name": "NAME",
+          "type": "str:70"
+        },
+        {
+          "name": "NAMEALTERN",
+          "type": "str:60"
+        },
+        {
+          "name": "TYPE",
+          "type": "str:20"
+        },
+        {
+          "name": "PPA",
+          "type": "str:25"
+        },
+        {
+          "name": "FUNDING2",
+          "type": "str:30"
+        },
+        {
+          "name": "SQMILES",
+          "type": "float:19.8"
+        },
+        {
+          "name": "ROTATE",
+          "type": "float:19.8"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "float:19.11"
+        }
+      ],
+      "sample_data": {},
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Calculate area",
+        "Dissolve by attribute",
+        "Union/Merge polygons",
+        "Simplify geometry",
+        "Calculate centroid",
+        "Zonal statistics (with raster)",
+        "Dissolve/Group by categorical attributes: UPDATE_MET, NAME_GIS, CITY",
+        "Symbolize by categories: UPDATE_MET, NAME_GIS, CITY",
+        "Calculate statistics for: PERIMETER, ACREAGE, SQMILES",
+        "Choropleth mapping by: PERIMETER, ACREAGE, SQMILES"
+      ],
+      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "geometry_type": "Polygon",
+      "feature_count": 20,
+      "bounds": [
+        897217.0819645002,
+        597072.8333333284,
+        959428.5833333321,
+        723424.0833333284
+      ],
+      "bounds_latlon": {
+        "west": -80.26627138211038,
+        "south": 25.97443422328811,
+        "east": -80.07418536146005,
+        "north": 26.320936731674184,
+        "formatted": "West: -80.266271, South: 25.974434, East: -80.074185, North: 26.320937"
+      },
+      "sampling_warning": "Could not sample data: year 0 is out of range"
+    },
+    {
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\future_landuse_activity_centers.shp",
+      "file_name": "future_landuse_activity_centers.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-09-23T02:12:00",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 56100,
+        "readable": "54.79 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "OBJECTID",
+          "type": "int:10"
+        },
+        {
+          "name": "BPC_BCFUTU",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SLUC1",
+          "type": "int:10"
+        },
+        {
+          "name": "ACRES",
+          "type": "float:19.11"
+        },
+        {
+          "name": "DENSITY",
+          "type": "str:10"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "float:19.11"
+        }
+      ],
+      "sample_data": {
+        "OBJECTID": [
+          2849,
+          1833,
+          586,
+          7728,
+          152
+        ],
+        "BPC_BCFUTU": [
+          0.0,
+          343905.833118,
+          851773.825041
+        ],
+        "SLUC1": [
+          100
+        ],
+        "ACRES": [
+          32.66845577,
+          234.44862116,
+          1484.8080817,
+          145.34161175,
+          440.40111053
+        ],
+        "DENSITY": [],
+        "SHAPE_AREA": [
+          6331055.28362,
+          19183795.6391,
+          10212541.0872,
+          1423032.24118,
+          64677981.3263
+        ],
+        "SHAPE_LEN": [
+          11236.7068002,
+          46893.3602149,
+          6095.64710445,
+          12885.6927828,
+          28822.8694576
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Calculate area",
+        "Dissolve by attribute",
+        "Union/Merge polygons",
+        "Simplify geometry",
+        "Calculate centroid",
+        "Zonal statistics (with raster)",
+        "Dissolve/Group by categorical attributes: DENSITY",
+        "Symbolize by categories: DENSITY",
+        "Calculate statistics for: OBJECTID, BPC_BCFUTU, SLUC1",
+        "Choropleth mapping by: OBJECTID, BPC_BCFUTU, SLUC1"
+      ],
+      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "geometry_type": "Polygon",
+      "feature_count": 47,
+      "bounds": [
+        873307.0932833441,
+        593405.7574557737,
+        953167.0999015942,
+        723946.73324994
+      ],
+      "bounds_latlon": {
+        "west": -80.33910311206994,
+        "south": 25.96469603932745,
+        "east": -80.09328768776491,
+        "north": 26.322496635036803,
+        "formatted": "West: -80.339103, South: 25.964696, East: -80.093288, North: 26.322497"
+      }
+    },
+    {
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\mobility_hubs.shp",
+      "file_name": "mobility_hubs.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-09-23T02:12:00",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 3796,
+        "readable": "3.71 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "OBJECTID_1",
+          "type": "int:10"
+        },
+        {
+          "name": "OBJECTID",
+          "type": "int:10"
+        },
+        {
+          "name": "Id",
+          "type": "int:10"
+        },
+        {
+          "name": "HUB_ID",
+          "type": "str:15"
+        },
+        {
+          "name": "GEN_LOCA",
+          "type": "str:254"
+        },
+        {
+          "name": "CFPv2_HubT",
+          "type": "str:20"
+        },
+        {
+          "name": "SOURCE",
+          "type": "str:50"
+        },
+        {
+          "name": "TriRail",
+          "type": "int32:5"
+        },
+        {
+          "name": "CoastalLin",
+          "type": "int32:5"
+        },
+        {
+          "name": "Hub_ID_1",
+          "type": "str:254"
+        },
+        {
+          "name": "Hub_Locati",
+          "type": "str:254"
+        },
+        {
+          "name": "Typ_Transe",
+          "type": "str:254"
+        },
+        {
+          "name": "Typ_FLU",
+          "type": "str:254"
+        },
+        {
+          "name": "Typ_TransA",
+          "type": "str:254"
+        },
+        {
+          "name": "1a_Produce",
+          "type": "str:254"
+        },
+        {
+          "name": "1a_ZeroCar",
+          "type": "str:254"
+        },
+        {
+          "name": "1a_Attract",
+          "type": "str:254"
+        },
+        {
+          "name": "1a_Trips",
+          "type": "str:254"
+        },
+        {
+          "name": "1a_Score",
+          "type": "float:19.11"
+        },
+        {
+          "name": "1b_Produce",
+          "type": "str:254"
+        },
+        {
+          "name": "1b_Attract",
+          "type": "str:254"
+        },
+        {
+          "name": "1b_Trips",
+          "type": "str:254"
+        },
+        {
+          "name": "1b_Score",
+          "type": "float:19.11"
+        },
+        {
+          "name": "1_Trips",
+          "type": "str:254"
+        },
+        {
+          "name": "1_Score",
+          "type": "float:19.11"
+        },
+        {
+          "name": "1_ScoreCat",
+          "type": "int:10"
+        },
+        {
+          "name": "1_Rank",
+          "type": "int:10"
+        },
+        {
+          "name": "2a_Raw",
+          "type": "str:254"
+        },
+        {
+          "name": "2a_Score",
+          "type": "float:19.11"
+        },
+        {
+          "name": "2a_Rank",
+          "type": "int:10"
+        },
+        {
+          "name": "2b_Raw",
+          "type": "float:19.11"
+        },
+        {
+          "name": "2b_Score",
+          "type": "float:19.11"
+        },
+        {
+          "name": "2b_Rank",
+          "type": "int:10"
+        },
+        {
+          "name": "2_Score",
+          "type": "float:19.11"
+        },
+        {
+          "name": "2_ScoreCat",
+          "type": "int:10"
+        },
+        {
+          "name": "2_Rank",
+          "type": "int:10"
+        },
+        {
+          "name": "3_Raw",
+          "type": "float:19.11"
+        },
+        {
+          "name": "3_Score",
+          "type": "float:19.11"
+        },
+        {
+          "name": "3_ScoreCat",
+          "type": "int:10"
+        },
+        {
+          "name": "3_Rank",
+          "type": "int:10"
+        },
+        {
+          "name": "Crit_Route",
+          "type": "int:10"
+        },
+        {
+          "name": "Crit_Facil",
+          "type": "str:254"
+        },
+        {
+          "name": "Crit_Rail",
+          "type": "str:254"
+        },
+        {
+          "name": "Crit_PR",
+          "type": "str:254"
+        },
+        {
+          "name": "Crit_Trans",
+          "type": "str:254"
+        },
+        {
+          "name": "Crit_Meets",
+          "type": "str:254"
+        },
+        {
+          "name": "Comp_Score",
+          "type": "float:19.11"
+        },
+        {
+          "name": "Comp_Sco_1",
+          "type": "int:10"
+        },
+        {
+          "name": "Comp_Rank",
+          "type": "int:10"
+        },
+        {
+          "name": "LRTP_Rank",
+          "type": "int:10"
+        },
+        {
+          "name": "LRTP_Score",
+          "type": "int:10"
+        },
+        {
+          "name": "LRTP_Type",
+          "type": "str:254"
+        }
+      ],
+      "sample_data": {
+        "OBJECTID_1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "OBJECTID": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "Id": [
+          0
+        ],
+        "HUB_ID": [
+          "GWHUB3",
+          "GWHUB5",
+          "GWHUB4",
+          "GWHUB1",
+          "GWHUB2"
+        ],
+        "GEN_LOCA": [
+          "Deerfield Beach Tri-Rail Station",
+          "Cypress Creek Tri-Rail Station",
+          "Broward Blvd & NW/SW 1st Ave",
+          "Broward Blvd & University Dr",
+          "Broward Blvd & I-95"
+        ],
+        "CFPv2_HubT": [
+          "Gateway Hub"
+        ],
+        "SOURCE": [
+          "2035 LRTP"
+        ],
+        "TriRail": [
+          0,
+          1
+        ],
+        "CoastalLin": [
+          0,
+          1
+        ],
+        "Hub_ID_1": [
+          "GWHUB3",
+          "GWHUB5",
+          "GWHUB4",
+          "GWHUB1",
+          "GWHUB2"
+        ],
+        "Hub_Locati": [
+          "Cypress Creek & SFRC @ Cypress Creek Tri-Rail Station (Tri-Rail)",
+          "Broward Blvd & I-95 @ Fort Lauderdale Tri-Rail Station (Tri-Rail)",
+          "Broward Blvd & University Dr",
+          "Hillsboro Blvd & SFRC @ Deerfield Beech Tri-Rail Station (Tri-Rail)",
+          "Broward Blvd & NW/SW 1st Ave @ Broward Central Terminal & Brightline Intercity Station  (US 1 Breeze)"
+        ],
+        "Typ_Transe": [
+          "Urban Core",
+          "Suburban Residential",
+          "Suburban Commercial"
+        ],
+        "Typ_FLU": [
+          "Transportation/Commerce /Activity Center",
+          "Commerce",
+          "Activity Center"
+        ],
+        "Typ_TransA": [
+          "Rail Station",
+          "Streetside Transfer"
+        ],
+        "1a_Produce": [
+          "7,376",
+          "13,725",
+          "12,608",
+          "8,497",
+          "31,185"
+        ],
+        "1a_ZeroCar": [
+          "432",
+          "2,801",
+          "62",
+          "1,247",
+          "1,242"
+        ],
+        "1a_Attract": [
+          "33,042",
+          "15,674",
+          "65,933",
+          "171,207",
+          "62,345"
+        ],
+        "1a_Trips": [
+          "76,195",
+          "73,371",
+          "30,645",
+          "41,971",
+          "205,193"
+        ],
+        "1a_Score": [
+          32.1,
+          33.4,
+          13.4,
+          18.4,
+          89.9
+        ],
+        "1b_Produce": [
+          "2,217",
+          "0",
+          "17,217",
+          "511"
+        ],
+        "1b_Attract": [
+          "5,546",
+          "427",
+          "0",
+          "8,826"
+        ],
+        "1b_Trips": [
+          "938",
+          "0",
+          "7,763",
+          "26,043"
+        ],
+        "1b_Score": [
+          0.0,
+          8.9,
+          29.8,
+          1.1
+        ],
+        "1_Trips": [
+          "83,957",
+          "231,236",
+          "73,371",
+          "30,645",
+          "42,909"
+        ],
+        "1_Score": [
+          9.9,
+          14.5,
+          85.0,
+          25.9,
+          29.9
+        ],
+        "1_ScoreCat": [
+          100,
+          40,
+          20
+        ],
+        "1_Rank": [
+          2,
+          134,
+          9,
+          14,
+          81
+        ],
+        "2a_Raw": [
+          "1,367",
+          "1,832",
+          "2,723",
+          "2,909",
+          "18,071"
+        ],
+        "2a_Score": [
+          100.0,
+          7.6,
+          10.1,
+          15.1,
+          16.1
+        ],
+        "2a_Rank": [
+          1,
+          35,
+          7,
+          12,
+          23
+        ],
+        "2b_Raw": [
+          3.3,
+          37.0,
+          9.3,
+          9.5,
+          11.9
+        ],
+        "2b_Score": [
+          32.1,
+          100.0,
+          9.0,
+          25.2,
+          25.7
+        ],
+        "2b_Rank": [
+          1,
+          131,
+          7,
+          17,
+          18
+        ],
+        "2_Score": [
+          100.0,
+          9.8,
+          14.9,
+          18.1,
+          19.0
+        ],
+        "2_ScoreCat": [
+          100,
+          20
+        ],
+        "2_Rank": [
+          1,
+          7,
+          12,
+          19,
+          53
+        ],
+        "3_Raw": [
+          0.0,
+          2.0
+        ],
+        "3_Score": [
+          0.0,
+          20.0
+        ],
+        "3_ScoreCat": [
+          0,
+          20
+        ],
+        "3_Rank": [
+          33,
+          50
+        ],
+        "Crit_Route": [
+          2,
+          4,
+          5,
+          15
+        ],
+        "Crit_Facil": [
+          "Transfer",
+          "Rail"
+        ],
+        "Crit_Rail": [
+          "Y"
+        ],
+        "Crit_PR": [],
+        "Crit_Trans": [
+          "Y"
+        ],
+        "Crit_Meets": [
+          "Y"
+        ],
+        "Comp_Score": [
+          92.5,
+          12.2,
+          14.0,
+          22.4
+        ],
+        "Comp_Sco_1": [
+          100,
+          40,
+          20
+        ],
+        "Comp_Rank": [
+          1,
+          71,
+          10,
+          11,
+          52
+        ],
+        "LRTP_Rank": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "LRTP_Score": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "LRTP_Type": [
+          "GW"
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Point density/heatmap",
+        "Nearest neighbor analysis",
+        "Cluster analysis",
+        "Voronoi diagram",
+        "Thiessen polygons",
+        "Dissolve/Group by categorical attributes: HUB_ID, GEN_LOCA, CFPv2_HubT",
+        "Symbolize by categories: HUB_ID, GEN_LOCA, CFPv2_HubT",
+        "Calculate statistics for: OBJECTID_1, OBJECTID, Id",
+        "Choropleth mapping by: OBJECTID_1, OBJECTID, Id"
+      ],
+      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "geometry_type": "Point",
+      "feature_count": 132,
+      "bounds": [
+        861243.4290904999,
+        598407.9029632509,
+        954181.0001047514,
+        722370.9401416704
+      ],
+      "bounds_latlon": {
+        "west": -80.37574626638984,
+        "south": 25.978620983514034,
+        "east": -80.0902265240704,
+        "north": 26.318142181924127,
+        "formatted": "West: -80.375746, South: 25.978621, East: -80.090227, North: 26.318142"
+      }
+    },
+    {
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\port_everglades.shp",
+      "file_name": "port_everglades.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-09-23T02:12:00",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 2612,
+        "readable": "2.55 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "OBJECTID",
+          "type": "int:10"
+        },
+        {
+          "name": "BPC_BCFUTU",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SLUC1",
+          "type": "int:10"
+        },
+        {
+          "name": "ACRES",
+          "type": "float:19.11"
+        },
+        {
+          "name": "DENSITY",
+          "type": "str:10"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "float:19.11"
+        }
+      ],
+      "sample_data": {
+        "OBJECTID": [
+          2542
+        ],
+        "BPC_BCFUTU": [
+          2342913.07364
+        ],
+        "SLUC1": [
+          70
+        ],
+        "ACRES": [
+          3153.17791427
+        ],
+        "DENSITY": [],
+        "SHAPE_AREA": [
+          137351880.536
+        ],
+        "SHAPE_LEN": [
+          100725.043342
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Calculate area",
+        "Dissolve by attribute",
+        "Union/Merge polygons",
+        "Simplify geometry",
+        "Calculate centroid",
+        "Zonal statistics (with raster)",
+        "Dissolve/Group by categorical attributes: DENSITY",
+        "Symbolize by categories: DENSITY",
+        "Calculate statistics for: OBJECTID, BPC_BCFUTU, SLUC1",
+        "Choropleth mapping by: OBJECTID, BPC_BCFUTU, SLUC1"
+      ],
+      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "geometry_type": "Polygon",
+      "feature_count": 1,
+      "bounds": [
+        937279.3865983352,
+        628657.7850487044,
+        946881.4845201113,
+        643234.9842406957
+      ],
+      "bounds_latlon": {
+        "west": -80.143705882061,
+        "south": 26.060656563238766,
+        "east": -80.11415788098917,
+        "north": 26.100582140131227,
+        "formatted": "West: -80.143706, South: 26.060657, East: -80.114158, North: 26.100582"
+      }
+    },
+    {
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\rac.shp",
+      "file_name": "rac.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-09-23T02:12:00",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 152804,
+        "readable": "149.22 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "OBJECTID",
+          "type": "int:10"
+        },
+        {
+          "name": "BPC_BCFUTU",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SLUC1",
+          "type": "int:10"
+        },
+        {
+          "name": "ACRES",
+          "type": "float:19.11"
+        },
+        {
+          "name": "DENSITY",
+          "type": "str:10"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "float:19.11"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "float:19.11"
+        },
+        {
+          "name": "PERIMETER",
+          "type": "float:19.8"
+        },
+        {
+          "name": "UPDATED",
+          "type": "date"
+        },
+        {
+          "name": "UPDATE_MET",
+          "type": "str:50"
+        },
+        {
+          "name": "NAME_GIS",
+          "type": "str:50"
+        },
+        {
+          "name": "ACREAGE",
+          "type": "float:19.8"
+        },
+        {
+          "name": "CITY",
+          "type": "str:25"
+        },
+        {
+          "name": "LAYOUT",
+          "type": "str:5"
+        },
+        {
+          "name": "NOTE",
+          "type": "str:50"
+        },
+        {
+          "name": "NAME",
+          "type": "str:70"
+        },
+        {
+          "name": "NAMEALTERN",
+          "type": "str:60"
+        },
+        {
+          "name": "TYPE",
+          "type": "str:20"
+        },
+        {
+          "name": "PPA",
+          "type": "str:25"
+        },
+        {
+          "name": "FUNDING2",
+          "type": "str:30"
+        },
+        {
+          "name": "SQMILES",
+          "type": "float:19.8"
+        },
+        {
+          "name": "ROTATE",
+          "type": "float:19.8"
+        }
+      ],
+      "sample_data": {},
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Calculate area",
+        "Dissolve by attribute",
+        "Union/Merge polygons",
+        "Simplify geometry",
+        "Calculate centroid",
+        "Zonal statistics (with raster)",
+        "Dissolve/Group by categorical attributes: DENSITY, UPDATE_MET, NAME_GIS",
+        "Symbolize by categories: DENSITY, UPDATE_MET, NAME_GIS",
+        "Calculate statistics for: OBJECTID, BPC_BCFUTU, SLUC1",
+        "Choropleth mapping by: OBJECTID, BPC_BCFUTU, SLUC1"
+      ],
+      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "geometry_type": "Polygon",
+      "feature_count": 69,
+      "bounds": [
+        873307.0932833441,
+        593405.7574557737,
+        959428.5833333321,
+        723946.73324994
+      ],
+      "bounds_latlon": {
+        "west": -80.33910311206994,
+        "south": 25.96469603932745,
+        "east": -80.07417392943225,
+        "north": 26.32237448153021,
+        "formatted": "West: -80.339103, South: 25.964696, East: -80.074174, North: 26.322374"
+      },
+      "sampling_warning": "Could not sample data: year 0 is out of range"
+    }
+  ],
+  "total_files": 6
+}
