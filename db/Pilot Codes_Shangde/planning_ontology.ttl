@@ -1,0 +1,269 @@
+@prefix : <http://urbanplanning.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ============================================================
+# Urban Planning Ontology - MVP Version
+# ============================================================
+
+# -------------------- Class Definitions --------------------
+
+# Top-level Classes
+:PlanningConcept rdf:type rdfs:Class ;
+    rdfs:label "Planning Concept" ;
+    rdfs:comment "Abstract planning concepts like density, accessibility" .
+
+:UrbanEntity rdf:type rdfs:Class ;
+    rdfs:label "Urban Entity" ;
+    rdfs:comment "Physical or administrative geographic entities" .
+
+:AnalysisMethod rdf:type rdfs:Class ;
+    rdfs:label "Analysis Method" ;
+    rdfs:comment "Analytical methods and operations" .
+
+# -------------------- Planning Concepts --------------------
+
+:LandUse rdf:type :PlanningConcept ;
+    rdfs:label "Land Use" ;
+    rdfs:comment "How land is utilized (residential, commercial, etc.)" .
+
+:Density rdf:type :PlanningConcept ;
+    rdfs:label "Density" ;
+    rdfs:comment "Concentration of people, buildings, or activities" .
+
+:Accessibility rdf:type :PlanningConcept ;
+    rdfs:label "Accessibility" ;
+    rdfs:comment "Ease of reaching destinations or services" .
+
+:Zoning rdf:type :PlanningConcept ;
+    rdfs:label "Zoning" ;
+    rdfs:comment "Regulatory land use designations" .
+
+:Demographics rdf:type :PlanningConcept ;
+    rdfs:label "Demographics" ;
+    rdfs:comment "Population characteristics and statistics" .
+
+:TransitAccess rdf:type :PlanningConcept ;
+    rdfs:label "Transit Access" ;
+    rdfs:comment "Access to public transportation" .
+
+:Mobility rdf:type :PlanningConcept ;
+    rdfs:label "Mobility" ;
+    rdfs:comment "Movement and transportation patterns" .
+
+:ActivityCenter rdf:type :PlanningConcept ;
+    rdfs:label "Activity Center" ;
+    rdfs:comment "Concentrated areas of urban activity" .
+
+:Infrastructure rdf:type :PlanningConcept ;
+    rdfs:label "Infrastructure" ;
+    rdfs:comment "Physical systems and facilities" .
+
+:SpatialPattern rdf:type :PlanningConcept ;
+    rdfs:label "Spatial Pattern" ;
+    rdfs:comment "Geographic distribution and arrangement" .
+
+# -------------------- Urban Entities --------------------
+
+:Parcel rdf:type :UrbanEntity ;
+    rdfs:label "Parcel" ;
+    rdfs:comment "Individual land parcel or lot" .
+
+:CensusTract rdf:type :UrbanEntity ;
+    rdfs:label "Census Tract" ;
+    rdfs:comment "Census geographic unit" .
+
+:BlockGroup rdf:type :UrbanEntity ;
+    rdfs:label "Block Group" ;
+    rdfs:comment "Census block group" .
+
+:TAZ rdf:type :UrbanEntity ;
+    rdfs:label "Traffic Analysis Zone" ;
+    rdfs:comment "Transportation planning zone (TAZ)" .
+
+:TransitStop rdf:type :UrbanEntity ;
+    rdfs:label "Transit Stop" ;
+    rdfs:comment "Public transit station or stop" .
+
+:TransitRoute rdf:type :UrbanEntity ;
+    rdfs:label "Transit Route" ;
+    rdfs:comment "Public transit route or line" .
+
+:Road rdf:type :UrbanEntity ;
+    rdfs:label "Road" ;
+    rdfs:comment "Street or roadway" .
+
+:Building rdf:type :UrbanEntity ;
+    rdfs:label "Building" ;
+    rdfs:comment "Building structure" .
+
+:Jurisdiction rdf:type :UrbanEntity ;
+    rdfs:label "Jurisdiction" ;
+    rdfs:comment "Administrative boundary (city, county)" .
+
+:POI rdf:type :UrbanEntity ;
+    rdfs:label "Point of Interest" ;
+    rdfs:comment "Notable location or facility" .
+
+# -------------------- Properties --------------------
+
+# Entity Relationships
+:contains rdf:type rdf:Property ;
+    rdfs:label "contains" ;
+    rdfs:comment "Spatial containment relationship" ;
+    rdfs:domain :UrbanEntity ;
+    rdfs:range :UrbanEntity .
+
+:intersects rdf:type rdf:Property ;
+    rdfs:label "intersects" ;
+    rdfs:comment "Spatial intersection relationship" ;
+    rdfs:domain :UrbanEntity ;
+    rdfs:range :UrbanEntity .
+
+:adjacentTo rdf:type rdf:Property ;
+    rdfs:label "adjacent to" ;
+    rdfs:comment "Spatial adjacency relationship" ;
+    rdfs:domain :UrbanEntity ;
+    rdfs:range :UrbanEntity .
+
+:near rdf:type rdf:Property ;
+    rdfs:label "near" ;
+    rdfs:comment "Proximity relationship" ;
+    rdfs:domain :UrbanEntity ;
+    rdfs:range :UrbanEntity .
+
+# Attribute Relationships
+:hasAttribute rdf:type rdf:Property ;
+    rdfs:label "has attribute" ;
+    rdfs:comment "Entity has a planning attribute" ;
+    rdfs:domain :UrbanEntity ;
+    rdfs:range :PlanningConcept .
+
+:measuredOn rdf:type rdf:Property ;
+    rdfs:label "measured on" ;
+    rdfs:comment "Concept measured on entity" ;
+    rdfs:domain :PlanningConcept ;
+    rdfs:range :UrbanEntity .
+
+:relatedTo rdf:type rdf:Property ;
+    rdfs:label "related to" ;
+    rdfs:comment "General relationship between concepts" ;
+    rdfs:domain :PlanningConcept ;
+    rdfs:range :PlanningConcept .
+
+# Analysis Method Relationships
+:appliesTo rdf:type rdf:Property ;
+    rdfs:label "applies to" ;
+    rdfs:comment "Method applies to entity or concept" ;
+    rdfs:domain :AnalysisMethod .
+
+:requires rdf:type rdf:Property ;
+    rdfs:label "requires" ;
+    rdfs:comment "Method requires specific entity types" ;
+    rdfs:domain :AnalysisMethod .
+
+# -------------------- Specific Relationships --------------------
+
+# Entity Hierarchies
+:CensusTract :contains :BlockGroup .
+:CensusTract :contains :Parcel .
+:Jurisdiction :contains :CensusTract .
+:Jurisdiction :contains :TAZ .
+
+# Entity Attributes
+:Parcel :hasAttribute :LandUse .
+:Parcel :hasAttribute :Zoning .
+:Parcel :hasAttribute :Density .
+:CensusTract :hasAttribute :Demographics .
+:TAZ :hasAttribute :Mobility .
+:TransitStop :hasAttribute :TransitAccess .
+
+# Concept Measurements
+:Density :measuredOn :Parcel .
+:Density :measuredOn :TAZ .
+:Density :measuredOn :CensusTract .
+:Demographics :measuredOn :CensusTract .
+:Demographics :measuredOn :BlockGroup .
+:Accessibility :measuredOn :Parcel .
+:Accessibility :measuredOn :TAZ .
+:TransitAccess :measuredOn :Parcel .
+:TransitAccess :measuredOn :TAZ .
+
+# Concept Relationships
+:Accessibility :relatedTo :TransitAccess .
+:Accessibility :relatedTo :Mobility .
+:Density :relatedTo :LandUse .
+:ActivityCenter :relatedTo :Density .
+:ActivityCenter :relatedTo :TransitAccess .
+
+# Spatial Relationships
+:Parcel :near :TransitStop .
+:Building :near :Road .
+:TransitStop :near :ActivityCenter .
+
+# -------------------- Analysis Methods --------------------
+
+:SpatialJoin rdf:type :AnalysisMethod ;
+    rdfs:label "Spatial Join" ;
+    rdfs:comment "Join datasets based on spatial relationship" .
+
+:BufferAnalysis rdf:type :AnalysisMethod ;
+    rdfs:label "Buffer Analysis" ;
+    rdfs:comment "Create buffer zones around features" .
+
+:ZonalStatistics rdf:type :AnalysisMethod ;
+    rdfs:label "Zonal Statistics" ;
+    rdfs:comment "Calculate statistics by zones" .
+
+:DensityCalculation rdf:type :AnalysisMethod ;
+    rdfs:label "Density Calculation" ;
+    rdfs:comment "Calculate density metrics" .
+
+:AccessibilityAnalysis rdf:type :AnalysisMethod ;
+    rdfs:label "Accessibility Analysis" ;
+    rdfs:comment "Measure accessibility to services" .
+
+:NetworkAnalysis rdf:type :AnalysisMethod ;
+    rdfs:label "Network Analysis" ;
+    rdfs:comment "Transportation network analysis" .
+
+:SpatialQuery rdf:type :AnalysisMethod ;
+    rdfs:label "Spatial Query" ;
+    rdfs:comment "Query features by spatial criteria" .
+
+:AttributeQuery rdf:type :AnalysisMethod ;
+    rdfs:label "Attribute Query" ;
+    rdfs:comment "Query features by attributes" .
+
+:Aggregation rdf:type :AnalysisMethod ;
+    rdfs:label "Aggregation" ;
+    rdfs:comment "Aggregate data to higher geographic level" .
+
+:Overlay rdf:type :AnalysisMethod ;
+    rdfs:label "Overlay Analysis" ;
+    rdfs:comment "Combine multiple layers" .
+
+# -------------------- Method Requirements --------------------
+
+:SpatialJoin :requires :Parcel .
+:SpatialJoin :requires :CensusTract .
+
+:BufferAnalysis :appliesTo :TransitStop .
+:BufferAnalysis :appliesTo :Road .
+
+:ZonalStatistics :appliesTo :CensusTract .
+:ZonalStatistics :appliesTo :TAZ .
+
+:DensityCalculation :requires :Parcel .
+:DensityCalculation :measuredOn :TAZ .
+
+:AccessibilityAnalysis :requires :TransitStop .
+:AccessibilityAnalysis :requires :Road .
+:AccessibilityAnalysis :appliesTo :Parcel .
+
+:NetworkAnalysis :requires :Road .
+:NetworkAnalysis :requires :TransitRoute .
+
+:Aggregation :requires :Parcel .
+:Aggregation :appliesTo :CensusTract .
