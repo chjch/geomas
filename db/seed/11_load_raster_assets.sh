@@ -4,15 +4,9 @@ set -euo pipefail
 # Path to the raster manifest embedded in the image
 MANIFEST_PATH="/docker-entrypoint-initdb.d/21_manifest_raster.yaml"
 
-# NOTE: If using signed URLs (e.g., Google Cloud Storage signed URLs), remember to:
-# - Regenerate signed URLs when they expire (typically 7 days)
-# - Update the URI in manifest_raster.yaml with the new signed URL
-# - Signed URLs contain x-goog-expires parameter indicating expiration time
-#
-# To regenerate: gcloud storage signurls create <gs://path> --duration=7d --private-key-file=<key.json>
-
 PSQL_TARGET=(psql --username "$POSTGRES_USER" --dbname "$POSTGRES_DB")
 RASTER_SCHEMA=${RASTER_SCHEMA:-raster}
+GCP_SA_KEY=${GCP_SA_KEY:-/run/secrets/gcp_sa_key}
 
 # Skip quietly if no manifest is provided
 if [ ! -f "$MANIFEST_PATH" ]; then
@@ -21,27 +15,36 @@ if [ ! -f "$MANIFEST_PATH" ]; then
 fi
 
 # Ensure required tooling is present inside the container
-for tool in yq curl raster2pgsql psql; do
+for tool in yq raster2pgsql psql; do
   if ! command -v "$tool" >/dev/null 2>&1; then
     echo "Required tool '$tool' is missing; aborting raster load." >&2
     exit 1
   fi
 done
 
+# Check for gcloud
+if ! command -v gcloud >/dev/null 2>&1; then
+  echo "ERROR: gcloud not found. Install Google Cloud SDK." >&2
+  exit 1
+fi
+
+# Authenticate with service account key if available
+if [ -f "$GCP_SA_KEY" ]; then
+  export GOOGLE_APPLICATION_CREDENTIALS="$GCP_SA_KEY"
+  gcloud auth activate-service-account --key-file="$GCP_SA_KEY" --quiet
+else
+  echo "WARNING: Service account key not found at $GCP_SA_KEY" >&2
+  echo "Assuming Application Default Credentials are configured" >&2
+fi
+
 # Ensure the target schema exists before loading tables
 "${PSQL_TARGET[@]}" -c "CREATE SCHEMA IF NOT EXISTS \"$RASTER_SCHEMA\";"
-
-# Remember whether gsutil is available for gs:// downloads
-GSUTIL_BIN=""
-if command -v gsutil >/dev/null 2>&1; then
-  GSUTIL_BIN=$(command -v gsutil)
-fi
 
 # Parse manifest rows into tab-separated lines we can iterate over
 mapfile -t RASTER_ENTRIES < <(
   yq -r '.rasters[]? | [
       .name,
-      .uri,
+      .gs_path,
       (.srid // 4326),
       (.schema // "raster"),
       (.table // .name),
@@ -57,34 +60,17 @@ if [ ${#RASTER_ENTRIES[@]} -eq 0 ]; then
 fi
 
 for entry in "${RASTER_ENTRIES[@]}"; do
-  IFS=$'\t' read -r name uri srid schema table tile_size extra_opts <<< "$entry"
+  IFS=$'\t' read -r name gs_path srid schema table tile_size extra_opts <<< "$entry"
 
-  printf 'Downloading raster "%s" from %s\n' "$name" "$uri"
+  printf 'Downloading raster "%s" from %s\n' "$name" "$gs_path"
   tmp_raster=$(mktemp --suffix=.tif)
 
-  # Fetch the raster. HTTPS (including signed URLs) works out of the box.
-  # IMPORTANT: If download fails, the signed URL may have expired. Regenerate it and update manifest.yaml
-  if [[ "$uri" == gs://* ]]; then
-    if [[ -z "$GSUTIL_BIN" ]]; then
-      echo "gs:// URI '$uri' requires gsutil; provide an https URL or install gsutil." >&2
-      rm -f "$tmp_raster"
-      exit 1
-    fi
-    if ! "$GSUTIL_BIN" cp "$uri" "$tmp_raster"; then
-      echo "ERROR: Failed to download raster '$name' from gs:// URI" >&2
-      echo "If using a signed URL, it may have expired. Regenerate and update manifest_raster.yaml" >&2
-      rm -f "$tmp_raster"
-      exit 1
-    fi
-  else
-    if ! curl -sSL -f "$uri" -o "$tmp_raster"; then
-      echo "ERROR: Failed to download raster '$name' from $uri" >&2
-      echo "If using a signed URL (contains 'x-goog-signature'), it may have expired." >&2
-      echo "Regenerate the signed URL and update the URI in manifest_raster.yaml" >&2
-      echo "Command: gcloud storage signurls create <gs://path> --duration=7d --private-key-file=<key.json>" >&2
-      rm -f "$tmp_raster"
-      exit 1
-    fi
+  # Download using gcloud storage cp with service account authentication
+  if ! gcloud storage cp "$gs_path" "$tmp_raster"; then
+    echo "ERROR: Failed to download raster '$name' from $gs_path" >&2
+    echo "Check that the file exists and service account has storage.objectViewer role" >&2
+    rm -f "$tmp_raster"
+    exit 1
   fi
 
   printf 'Loading raster "%s" into %s.%s (SRID %s)\n' "$name" "$schema" "$table" "$srid"

@@ -1,21 +1,12 @@
-# Seed rasters manifest. 
+# Raster assets manifest
+# Lists raster layers to load from Google Cloud Storage using service account authentication
+#
+# NOTE: The service account (jaxtwin-svc@dcp-fiber.iam.gserviceaccount.com) must have
+# storage.objectViewer role on the bucket. The key is mounted at /run/secrets/gcp_sa_key
 
 rasters:
   - name: duval_impervious
-    uri: "https://storage.googleapis.com/jaxtwin-gis-assets-us/rasters/\
-          impervious/duval_2022_ccap_v2_hires_impervious_20231226_cog.tif?\
-          x-goog-signature=0db5271bd58659050249a23f6aaa2decf13edc8f832c9e53c\
-          c3dd4986106afde0adc87be0babefd38f1cb9e91dcac9ffa805ec1d60ef4c7f4be\
-          c308fbb6d51c83f2d8cefb2ed6fe2e890040d917757191b124c66210dd916273c0\
-          74fd56f51aee4ce582891a8020b6c8a352e91dc6579aac335f5f6e920dad787379\
-          b84dd4303843c518ce187aef396c68f9822aa86132074eafdbff2d230e6333d628\
-          e8fbcbec87d53491936476228f1f7bf52158ba8d33671bac01619b4a9680cddcc0\
-          f83b1325ae79642cd509b2e07dcd3a54552dbdbecf01ba854b60bc8a5640fafa2d\
-          202935ad6f1f78c1fdd3bc8af8372434e26ca3e8e0bc7e0e3b3648314370d19e39\
-          0&x-goog-algorithm=GOOG4-RSA-SHA256&x-goog-credential=jaxtwin-svc%\
-          40dcp-fiber.iam.gserviceaccount.com%2F20251103%2Fus%2Fstorage%\
-          2Fgoog4_request&x-goog-date=20251103T045720Z&x-goog-expires=604800\
-          &x-goog-signedheaders=host"
+    gs_path: "gs://jaxtwin-gis-assets-us/rasters/impervious/duval_2022_ccap_v2_hires_impervious_20231226_cog.tif"
     srid: 4326
     schema: raster
     table: duval_impervious
@@ -23,4 +14,3 @@ rasters:
     raster2pgsql_options:
       - -Y
       - -e
-
