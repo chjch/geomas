@@ -1,0 +1,375 @@
+{
+  "discovery_timestamp": "2025-11-21T11:23:28.103129",
+  "source_metadata": "metadata_output.json",
+  "total_datasets": 6,
+  "datasets": [
+    {
+      "file_name": "airport_port_everglades.shp",
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\airport_port_everglades.shp",
+      "data_type": "geospatial",
+      "classification": "secondary",
+      "spatial_context": {
+        "geometry_type": "Polygon",
+        "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "extent_coords": {
+          "west": -80.16873062106264,
+          "south": 26.060802809274517,
+          "east": -80.11415788098923,
+          "north": 26.100582140131205,
+          "formatted": "West: -80.168731, South: 26.060803, East: -80.114158, North: 26.100582"
+        },
+        "extent_description": "Fort Lauderdale, Florida.",
+        "feature_count": 1
+      },
+      "temporal_context": {
+        "file_modified": "2025-09-23T02:12:00",
+        "has_temporal_dimension": false,
+        "reference_period": "2025"
+      },
+      "semantic_context": {
+        "represents": "Polygons outlining the spatial extent of the airport and port facilities in the Everglades region, with attributes indicating built‑up area, land‑use classification, acreage, and density.",
+        "domain": "Transportation (infrastructure)"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "int:10",
+          "meaning": "A unique identifier used as the primary key for each record in the dataset.",
+          "category": "numerical"
+        },
+        {
+          "name": "BPC_BCFUTU",
+          "type": "float:19.11",
+          "meaning": "A monetary value (float) likely representing a forecasted or budgeted cost, price, or value for a future period (e.g., projected budget, future cost estimate).",
+          "category": "numerical"
+        },
+        {
+          "name": "SLUC1",
+          "type": "int:10",
+          "meaning": "A numeric count or code—commonly used to represent the quantity of units, transactions, or a level of usage for a specific category or time period.",
+          "category": "numerical"
+        }
+      ],
+      "capable_tasks": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Zoning compliance checking",
+        "Environmental impact assessment (wetlands and habitat protection)",
+        "Stormwater management and flood risk analysis",
+        "Transportation network connectivity and transit accessibility",
+        "Noise pollution exposure mapping"
+      ]
+    },
+    {
+      "file_name": "community_redevelopment_areas.shp",
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\community_redevelopment_areas.shp",
+      "data_type": "geospatial",
+      "classification": "secondary",
+      "spatial_context": {
+        "geometry_type": "Polygon",
+        "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "extent_coords": {
+          "west": -80.26627138211038,
+          "south": 25.97443422328811,
+          "east": -80.07418536146005,
+          "north": 26.320936731674184,
+          "formatted": "West: -80.266271, South: 25.974434, East: -80.074185, North: 26.320937"
+        },
+        "extent_description": "Miami, Florida",
+        "feature_count": 20
+      },
+      "temporal_context": {
+        "file_modified": "2025-09-23T02:12:00",
+        "temporal_fields": [
+          "UPDATED",
+          "UPDATE_MET"
+        ],
+        "has_temporal_dimension": true,
+        "reference_period": "2025"
+      },
+      "semantic_context": {
+        "represents": "A set of polygonal boundaries delineating community redevelopment zones, each with associated perimeter, area, update timestamps, and a GIS designation name.",
+        "domain": "land use"
+      },
+      "fields": [
+        {
+          "name": "PERIMETER",
+          "type": "float:19.8",
+          "meaning": "Numeric measurement of the total length of a boundary (e.g., of a parcel, feature, or survey zone), likely expressed in meters or feet.",
+          "category": "spatial"
+        },
+        {
+          "name": "UPDATED",
+          "type": "date",
+          "meaning": "The date on which the record or associated data was last modified or updated.",
+          "category": "temporal"
+        },
+        {
+          "name": "UPDATE_MET",
+          "type": "str:50",
+          "meaning": "A string (up to 50 characters) indicating the method, metric, or protocol used to perform the update (e.g., “manual”, “automated scan”, “GPS recalibration”).",
+          "category": "categorical"
+        }
+      ],
+      "capable_tasks": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Land use suitability and redevelopment potential analysis",
+        "Transit accessibility and connectivity assessment for targeted zones",
+        "Zoning compliance and land‐use regulation verification",
+        "Infrastructure capacity and utility service coverage evaluation",
+        "Environmental vulnerability and resilience assessment for redevelopment planning"
+      ]
+    },
+    {
+      "file_name": "future_landuse_activity_centers.shp",
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\future_landuse_activity_centers.shp",
+      "data_type": "geospatial",
+      "classification": "secondary",
+      "spatial_context": {
+        "geometry_type": "Polygon",
+        "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "extent_coords": {
+          "west": -80.33910311206994,
+          "south": 25.96469603932745,
+          "east": -80.09328768776491,
+          "north": 26.322496635036803,
+          "formatted": "West: -80.339103, South: 25.964696, East: -80.093288, North: 26.322497"
+        },
+        "extent_description": "Miami-Dade County, Florida",
+        "feature_count": 47
+      },
+      "temporal_context": {
+        "file_modified": "2025-09-23T02:12:00",
+        "has_temporal_dimension": false,
+        "reference_period": "unknown"
+      },
+      "semantic_context": {
+        "represents": "A set of polygons that delineate projected future activity‑center zones, each annotated with an estimated activity potential (e.g., employment or commercial value), area in acres, and density metrics for use in planning new land‑use developments.",
+        "domain": "land use"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "int:10",
+          "meaning": "A unique identifier for each record (often used as a primary key).",
+          "category": "categorical"
+        },
+        {
+          "name": "BPC_BCFUTU",
+          "type": "float:19.11",
+          "meaning": "A floating‑point measurement, likely representing a financial or inventory value (e.g., budget, cost, or quantity).",
+          "category": "numerical"
+        },
+        {
+          "name": "SLUC1",
+          "type": "int:10",
+          "meaning": "An integer code or flag, possibly indicating a status or classification (e.g., a specific category label).",
+          "category": "categorical"
+        }
+      ],
+      "capable_tasks": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Land use zoning compliance analysis",
+        "Future land‑use suitability and growth potential modeling",
+        "Service area and catchment analysis for public facilities",
+        "Transit accessibility and corridor planning around activity centers",
+        "Environmental impact assessment for proposed development zones"
+      ]
+    },
+    {
+      "file_name": "mobility_hubs.shp",
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\mobility_hubs.shp",
+      "data_type": "geospatial",
+      "classification": "secondary",
+      "spatial_context": {
+        "geometry_type": "Point",
+        "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "extent_coords": {
+          "west": -80.37574626638984,
+          "south": 25.978620983514034,
+          "east": -80.0902265240704,
+          "north": 26.318142181924127,
+          "formatted": "West: -80.375746, South: 25.978621, East: -80.090227, North: 26.318142"
+        },
+        "extent_description": "Miami‑Dade County, Florida",
+        "feature_count": 132
+      },
+      "temporal_context": {
+        "file_modified": "2025-09-23T02:12:00",
+        "has_temporal_dimension": false,
+        "reference_period": "2025"
+      },
+      "semantic_context": {
+        "represents": "A point dataset of urban mobility hubs (e.g., bus stops, train stations, or multimodal transfer points) identified by unique HUB_IDs.",
+        "domain": "transportation"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID_1",
+          "type": "int:10",
+          "meaning": "A surrogate integer key that uniquely identifies each record within a table, often auto‑generated by the database.",
+          "category": "categorical"
+        },
+        {
+          "name": "OBJECTID",
+          "type": "int:10",
+          "meaning": "The primary key of the feature class, used by GIS software to reference individual geometries or records.",
+          "category": "categorical"
+        },
+        {
+          "name": "Id",
+          "type": "int:10",
+          "meaning": "An additional identifier, possibly referencing an external system or grouping records within the dataset.",
+          "category": "categorical"
+        }
+      ],
+      "capable_tasks": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Transit accessibility analysis",
+        "Service area coverage assessment for multimodal hubs",
+        "Equity and equity gap analysis of mobility hub placement",
+        "Land‑use compatibility and zoning compliance checking around hubs",
+        "Network connectivity optimization for integrated transport planning"
+      ]
+    },
+    {
+      "file_name": "port_everglades.shp",
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\port_everglades.shp",
+      "data_type": "geospatial",
+      "classification": "secondary",
+      "spatial_context": {
+        "geometry_type": "Polygon",
+        "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "extent_coords": {
+          "west": -80.143705882061,
+          "south": 26.060656563238766,
+          "east": -80.11415788098917,
+          "north": 26.100582140131227,
+          "formatted": "West: -80.143706, South: 26.060657, East: -80.114158, North: 26.100582"
+        },
+        "extent_description": "Miami‑Dade County, Florida",
+        "feature_count": 1
+      },
+      "temporal_context": {
+        "file_modified": "2025-09-23T02:12:00",
+        "has_temporal_dimension": false,
+        "reference_period": "unknown"
+      },
+      "semantic_context": {
+        "represents": "Polygon boundaries of parcels within the Port of Everglades area, each tagged with acreage, density, and a land‑use classification code (SLUC1) for planning purposes.",
+        "domain": "land use"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "int:10",
+          "meaning": "A unique integer identifier for each record in the dataset, typically used as a primary key.",
+          "category": "numerical"
+        },
+        {
+          "name": "BPC_BCFUTU",
+          "type": "float:19.11",
+          "meaning": "A monetary or metric value (e.g., revenue, cost, or forecast amount) for the current fiscal period, expressed as a floating‑point number.",
+          "category": "numerical"
+        },
+        {
+          "name": "SLUC1",
+          "type": "int:10",
+          "meaning": "A count or quantitative measure for a specific category or item (e.g., number of units, occurrences, or units of service).",
+          "category": "numerical"
+        }
+      ],
+      "capable_tasks": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Zoning compliance checking",
+        "Storm surge vulnerability and flood risk analysis",
+        "Land use compatibility assessment with adjacent communities",
+        "Port infrastructure capacity and expansion feasibility analysis",
+        "Transportation network connectivity and logistics access assessment"
+      ]
+    },
+    {
+      "file_name": "rac.shp",
+      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\rac.shp",
+      "data_type": "geospatial",
+      "classification": "primary",
+      "spatial_context": {
+        "geometry_type": "Polygon",
+        "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+        "extent_coords": {
+          "west": -80.33910311206994,
+          "south": 25.96469603932745,
+          "east": -80.07417392943225,
+          "north": 26.32237448153021,
+          "formatted": "West: -80.339103, South: 25.964696, East: -80.074174, North: 26.322374"
+        },
+        "extent_description": "Miami‑Dade County, Florida",
+        "feature_count": 69
+      },
+      "temporal_context": {
+        "file_modified": "2025-09-23T02:12:00",
+        "temporal_fields": [
+          "UPDATED",
+          "UPDATE_MET"
+        ],
+        "has_temporal_dimension": true,
+        "reference_period": "2024"
+      },
+      "semantic_context": {
+        "represents": "A polygon shapefile of land parcels identified by coded land‑use categories (BPC_BCFUTU, SLUC1), each with its area in acres and an associated density metric.",
+        "domain": "Land use (zoning)"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "int:10",
+          "meaning": "A unique identifier assigned to each record in the dataset.",
+          "category": "numerical"
+        },
+        {
+          "name": "BPC_BCFUTU",
+          "type": "float:19.11",
+          "meaning": "A forecasted or projected value—most likely a monetary amount or other quantitative measure used for budgeting or planning purposes.",
+          "category": "numerical"
+        },
+        {
+          "name": "SLUC1",
+          "type": "int:10",
+          "meaning": "A coded indicator or classification (e.g., sample type, status, or category).",
+          "category": "categorical"
+        }
+      ],
+      "capable_tasks": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Zoning compliance checking",
+        "Land‑use classification and change detection",
+        "Public service accessibility analysis (e.g., schools, hospitals)",
+        "Environmental buffer zone delineation (e.g., wetlands, floodplains)",
+        "Urban density and heat‑island analysis"
+      ]
+    }
+  ]
+}

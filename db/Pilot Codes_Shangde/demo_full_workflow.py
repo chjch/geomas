@@ -10,8 +10,13 @@ from mda_agent import MetadataDiscoveryAgent
 from qp_agent import QueryProcessingAgent
 
 
-def demo_full_workflow():
-    """Run complete workflow demonstration"""
+def demo_full_workflow(data_directory: str = None, rescan: bool = False):
+    """Run complete workflow demonstration
+
+    Args:
+        data_directory: Path to the data directory. If not provided, uses default.
+        rescan: If True, force rescan even if metadata file exists.
+    """
 
     print("=" * 80)
     print(" Two-Agent Data Discovery System - Complete Workflow Demo")
@@ -21,17 +26,21 @@ def demo_full_workflow():
     print("\n[STEP 1] Running Metadata Scanner...")
     print("-" * 80)
 
-    data_directory = r"C:\Users\gaosh\UFL Dropbox\Shangde Gao\BMPO Ranking Tool\GIS Data\Regional Activity Centers"
+    if data_directory is None:
+        data_directory = r"C:\Users\gaosh\UFL Dropbox\Shangde Gao\BMPO Ranking Tool\GIS Data\Regional Activity Centers"
 
     # Check if metadata already exists
     metadata_file = "metadata_output.json"
 
-    if Path(metadata_file).exists():
+    if Path(metadata_file).exists() and not rescan:
         print(f"Using existing metadata file: {metadata_file}")
         with open(metadata_file, 'r') as f:
             metadata = json.load(f)
     else:
-        print(f"Scanning directory: {data_directory}")
+        if rescan:
+            print(f"Forcing rescan of directory: {data_directory}")
+        else:
+            print(f"Scanning directory: {data_directory}")
         scanner = MetadataScanner()
         metadata = scanner.scan_directory(data_directory, metadata_file)
 
@@ -196,9 +205,19 @@ def interactive_query_demo():
 
 
 if __name__ == '__main__':
-    import sys
+    import argparse
 
-    if len(sys.argv) > 1 and sys.argv[1] == 'interactive':
+    parser = argparse.ArgumentParser(description='Two-Agent Data Discovery System')
+    parser.add_argument('--data-dir', '-d', type=str, default=None,
+                        help='Path to the data directory to scan')
+    parser.add_argument('--interactive', '-i', action='store_true',
+                        help='Run in interactive query mode')
+    parser.add_argument('--rescan', '-r', action='store_true',
+                        help='Force rescan even if metadata file exists')
+
+    args = parser.parse_args()
+
+    if args.interactive:
         interactive_query_demo()
     else:
-        demo_full_workflow()
+        demo_full_workflow(data_directory=args.data_dir, rescan=args.rescan)

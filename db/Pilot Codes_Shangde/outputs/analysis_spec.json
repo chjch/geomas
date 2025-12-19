@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-12-19T12:16:29.885231",
+  "query": "Analyze residential density near transit stops",
+  "parsed_query": {
+    "original_query": "Analyze residential density near transit stops",
+    "concepts": [],
+    "entities": [],
+    "filters": [],
+    "spatial_relationships": [],
+    "intent": "Analyze residential density near transit stops"
+  },
+  "ontology_context": {
+    "concepts": [],
+    "entities": [],
+    "methods": []
+  },
+  "required_data": [],
+  "analysis_workflow": [],
+  "sufficiency_check": {
+    "can_complete": false,
+    "status": "unknown",
+    "missing_data": [],
+    "alternatives": "Manual workflow design needed"
+  }
+}

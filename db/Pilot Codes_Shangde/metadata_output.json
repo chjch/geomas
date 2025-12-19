@@ -1,67 +1,148 @@
 {
-  "scan_timestamp": "2025-11-17T15:18:49.855190",
-  "scan_directory": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers",
+  "scan_timestamp": "2025-12-19T12:16:26.052994",
+  "scan_directory": "/Users/shangdegao/PostGIS",
   "files": [
     {
-      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\airport_port_everglades.shp",
-      "file_name": "airport_port_everglades.shp",
+      "file_path": "/Users/shangdegao/PostGIS/popemploy.shp",
+      "file_name": "popemploy.shp",
       "file_extension": ".shp",
-      "last_modified": "2025-09-23T02:12:00",
+      "last_modified": "2025-12-19T11:56:48",
       "data_type": "geospatial",
       "file_size": {
-        "bytes": 3300,
-        "readable": "3.22 KB"
+        "bytes": 1766612,
+        "readable": "1.68 MB"
       },
       "format": ".shp",
       "features": [
         {
           "name": "OBJECTID",
-          "type": "int:10"
+          "type": "float:32.10"
         },
         {
-          "name": "BPC_BCFUTU",
-          "type": "float:19.11"
+          "name": "TAZ_MPO",
+          "type": "float:32.10"
         },
         {
-          "name": "SLUC1",
-          "type": "int:10"
+          "name": "TOT_POP",
+          "type": "float:32.10"
+        },
+        {
+          "name": "TOT_EMP",
+          "type": "float:32.10"
         },
         {
           "name": "ACRES",
-          "type": "float:19.11"
+          "type": "float:32.10"
         },
         {
-          "name": "DENSITY",
-          "type": "str:10"
+          "name": "EPRATIO",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPE_LENG",
+          "type": "float:32.10"
         },
         {
           "name": "SHAPE_AREA",
-          "type": "float:19.11"
+          "type": "float:32.10"
         },
         {
-          "name": "SHAPE_LEN",
-          "type": "float:19.11"
+          "name": "POPDEN",
+          "type": "float:32.10"
+        },
+        {
+          "name": "EMPDEN",
+          "type": "float:32.10"
+        },
+        {
+          "name": "POP_RANK",
+          "type": "int:11"
+        },
+        {
+          "name": "EMP_RANK",
+          "type": "int:11"
         }
       ],
       "sample_data": {
         "OBJECTID": [
-          2542
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
         ],
-        "BPC_BCFUTU": [
-          2342913.07364
+        "TAZ_MPO": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
         ],
-        "SLUC1": [
-          70
+        "TOT_POP": [
+          0.0,
+          1479.0,
+          586.0,
+          875.0,
+          1677.0
+        ],
+        "TOT_EMP": [
+          1.0,
+          930.0,
+          645.0,
+          499.0,
+          286.0
         ],
         "ACRES": [
-          3153.17791427
+          99.335232,
+          143.811156,
+          83.222133,
+          190.129552,
+          63.345748
         ],
-        "DENSITY": [],
+        "EPRATIO": [
+          0.0
+        ],
+        "SHAPE_LENG": [
+          12199.6631898,
+          12747.8387272,
+          11854.3959717,
+          14142.5624428,
+          7743.2185372
+        ],
         "SHAPE_AREA": [
-          137351880.536
+          2759329.71506,
+          6264388.81241,
+          4327025.4202,
+          3625141.60122,
+          8282010.14467
         ],
-        "SHAPE_LEN": [
-          100725.043342
+        "POPDEN": [
+          0.0,
+          7.77890645848,
+          8.80855646464,
+          7.04139606708,
+          11.6611259282
+        ],
+        "EMPDEN": [
+          2.87913959873,
+          3.46982816827,
+          4.89140162703,
+          7.75034208748,
+          0.0157863792215
+        ],
+        "POP_RANK": [
+          482,
+          168,
+          363,
+          438,
+          828
+        ],
+        "EMP_RANK": [
+          939,
+          203,
+          466,
+          310,
+          413
         ]
       },
       "applicable_operations": [
@@ -77,865 +158,191 @@
         "Simplify geometry",
         "Calculate centroid",
         "Zonal statistics (with raster)",
-        "Dissolve/Group by categorical attributes: DENSITY",
-        "Symbolize by categories: DENSITY",
-        "Calculate statistics for: OBJECTID, BPC_BCFUTU, SLUC1",
-        "Choropleth mapping by: OBJECTID, BPC_BCFUTU, SLUC1"
+        "Calculate statistics for: OBJECTID, TAZ_MPO, TOT_POP",
+        "Choropleth mapping by: OBJECTID, TAZ_MPO, TOT_POP"
       ],
-      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "crs": "EPSG:4326",
       "geometry_type": "Polygon",
-      "feature_count": 1,
+      "feature_count": 953,
       "bounds": [
-        929063.3436472602,
-        628657.785048686,
-        946881.4845200926,
-        643234.9842406884
+        -80.45099049806592,
+        25.956774627759867,
+        -80.07452910571493,
+        26.355551730147965
       ],
       "bounds_latlon": {
-        "west": -80.16873062106264,
-        "south": 26.060802809274517,
-        "east": -80.11415788098923,
-        "north": 26.100582140131205,
-        "formatted": "West: -80.168731, South: 26.060803, East: -80.114158, North: 26.100582"
+        "west": -80.45099049806592,
+        "south": 25.956774627759867,
+        "east": -80.07452910571493,
+        "north": 26.355551730147965,
+        "formatted": "West: -80.450990, South: 25.956775, East: -80.074529, North: 26.355552"
       }
     },
     {
-      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\community_redevelopment_areas.shp",
-      "file_name": "community_redevelopment_areas.shp",
+      "file_path": "/Users/shangdegao/PostGIS/equity.shp",
+      "file_name": "equity.shp",
       "file_extension": ".shp",
-      "last_modified": "2025-09-23T02:12:00",
+      "last_modified": "2025-12-19T11:56:48",
       "data_type": "geospatial",
       "file_size": {
-        "bytes": 91092,
-        "readable": "88.96 KB"
+        "bytes": 2179912,
+        "readable": "2.08 MB"
       },
       "format": ".shp",
       "features": [
         {
-          "name": "PERIMETER",
-          "type": "float:19.8"
+          "name": "BLOCKGROUP",
+          "type": "str:254"
         },
         {
-          "name": "UPDATED",
-          "type": "date"
-        },
-        {
-          "name": "UPDATE_MET",
-          "type": "str:50"
-        },
-        {
-          "name": "NAME_GIS",
-          "type": "str:50"
-        },
-        {
-          "name": "ACREAGE",
-          "type": "float:19.8"
-        },
-        {
-          "name": "CITY",
-          "type": "str:25"
-        },
-        {
-          "name": "LAYOUT",
-          "type": "str:5"
-        },
-        {
-          "name": "NOTE",
-          "type": "str:50"
-        },
-        {
-          "name": "NAME",
-          "type": "str:70"
-        },
-        {
-          "name": "NAMEALTERN",
-          "type": "str:60"
-        },
-        {
-          "name": "TYPE",
-          "type": "str:20"
-        },
-        {
-          "name": "PPA",
-          "type": "str:25"
-        },
-        {
-          "name": "FUNDING2",
-          "type": "str:30"
-        },
-        {
-          "name": "SQMILES",
-          "type": "float:19.8"
-        },
-        {
-          "name": "ROTATE",
-          "type": "float:19.8"
+          "name": "SHAPE_LENG",
+          "type": "float:32.10"
         },
         {
           "name": "SHAPE_AREA",
-          "type": "float:19.11"
+          "type": "float:32.10"
         },
         {
-          "name": "SHAPE_LEN",
-          "type": "float:19.11"
-        }
-      ],
-      "sample_data": {},
-      "applicable_operations": [
-        "Spatial query/filter",
-        "Spatial join (with other layers)",
-        "Clip/Intersect (with boundary)",
-        "Buffer analysis",
-        "Reproject/Transform CRS",
-        "Export to different format",
-        "Calculate area",
-        "Dissolve by attribute",
-        "Union/Merge polygons",
-        "Simplify geometry",
-        "Calculate centroid",
-        "Zonal statistics (with raster)",
-        "Dissolve/Group by categorical attributes: UPDATE_MET, NAME_GIS, CITY",
-        "Symbolize by categories: UPDATE_MET, NAME_GIS, CITY",
-        "Calculate statistics for: PERIMETER, ACREAGE, SQMILES",
-        "Choropleth mapping by: PERIMETER, ACREAGE, SQMILES"
-      ],
-      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
-      "geometry_type": "Polygon",
-      "feature_count": 20,
-      "bounds": [
-        897217.0819645002,
-        597072.8333333284,
-        959428.5833333321,
-        723424.0833333284
-      ],
-      "bounds_latlon": {
-        "west": -80.26627138211038,
-        "south": 25.97443422328811,
-        "east": -80.07418536146005,
-        "north": 26.320936731674184,
-        "formatted": "West: -80.266271, South: 25.974434, East: -80.074185, North: 26.320937"
-      },
-      "sampling_warning": "Could not sample data: year 0 is out of range"
-    },
-    {
-      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\future_landuse_activity_centers.shp",
-      "file_name": "future_landuse_activity_centers.shp",
-      "file_extension": ".shp",
-      "last_modified": "2025-09-23T02:12:00",
-      "data_type": "geospatial",
-      "file_size": {
-        "bytes": 56100,
-        "readable": "54.79 KB"
-      },
-      "format": ".shp",
-      "features": [
-        {
-          "name": "OBJECTID",
-          "type": "int:10"
+          "name": "MINORITY",
+          "type": "float:32.10"
         },
         {
-          "name": "BPC_BCFUTU",
-          "type": "float:19.11"
+          "name": "YOUTH",
+          "type": "float:32.10"
         },
         {
-          "name": "SLUC1",
-          "type": "int:10"
+          "name": "AGE65",
+          "type": "float:32.10"
         },
         {
-          "name": "ACRES",
-          "type": "float:19.11"
+          "name": "HHPOVERTY",
+          "type": "float:32.10"
         },
         {
-          "name": "DENSITY",
-          "type": "str:10"
+          "name": "ZEROVEHICL",
+          "type": "float:32.10"
         },
         {
-          "name": "SHAPE_AREA",
-          "type": "float:19.11"
+          "name": "NOHSDIPLOM",
+          "type": "float:32.10"
         },
         {
-          "name": "SHAPE_LEN",
-          "type": "float:19.11"
+          "name": "FEMALEHH",
+          "type": "float:32.10"
+        },
+        {
+          "name": "LEP",
+          "type": "float:32.10"
+        },
+        {
+          "name": "DISABILITY",
+          "type": "float:32.10"
+        },
+        {
+          "name": "POVERTY_IN",
+          "type": "float:32.10"
+        },
+        {
+          "name": "RACIAL",
+          "type": "float:32.10"
+        },
+        {
+          "name": "ETHNIC",
+          "type": "float:32.10"
+        },
+        {
+          "name": "FOREIGN_BO",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SELECTEDCO",
+          "type": "float:32.10"
+        },
+        {
+          "name": "TOTALCOMPO",
+          "type": "float:32.10"
         }
       ],
       "sample_data": {
-        "OBJECTID": [
-          2849,
-          1833,
-          586,
-          7728,
-          152
+        "BLOCKGROUP": [
+          "1500000US120110917022",
+          "1500000US120110917011",
+          "1500000US120111101004",
+          "1500000US120110917012",
+          "1500000US120110917021"
         ],
-        "BPC_BCFUTU": [
-          0.0,
-          343905.833118,
-          851773.825041
+        "SHAPE_LENG": [
+          15681.0539493,
+          10954.7448729,
+          22254.0104758,
+          6617.81293665,
+          11643.8744956
         ],
-        "SLUC1": [
-          100
-        ],
-        "ACRES": [
-          32.66845577,
-          234.44862116,
-          1484.8080817,
-          145.34161175,
-          440.40111053
-        ],
-        "DENSITY": [],
         "SHAPE_AREA": [
-          6331055.28362,
-          19183795.6391,
-          10212541.0872,
-          1423032.24118,
-          64677981.3263
+          5530277.4168,
+          7478629.37766,
+          8455565.24605,
+          4990270.19155,
+          2524127.3643
         ],
-        "SHAPE_LEN": [
-          11236.7068002,
-          46893.3602149,
-          6095.64710445,
-          12885.6927828,
-          28822.8694576
-        ]
-      },
-      "applicable_operations": [
-        "Spatial query/filter",
-        "Spatial join (with other layers)",
-        "Clip/Intersect (with boundary)",
-        "Buffer analysis",
-        "Reproject/Transform CRS",
-        "Export to different format",
-        "Calculate area",
-        "Dissolve by attribute",
-        "Union/Merge polygons",
-        "Simplify geometry",
-        "Calculate centroid",
-        "Zonal statistics (with raster)",
-        "Dissolve/Group by categorical attributes: DENSITY",
-        "Symbolize by categories: DENSITY",
-        "Calculate statistics for: OBJECTID, BPC_BCFUTU, SLUC1",
-        "Choropleth mapping by: OBJECTID, BPC_BCFUTU, SLUC1"
-      ],
-      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
-      "geometry_type": "Polygon",
-      "feature_count": 47,
-      "bounds": [
-        873307.0932833441,
-        593405.7574557737,
-        953167.0999015942,
-        723946.73324994
-      ],
-      "bounds_latlon": {
-        "west": -80.33910311206994,
-        "south": 25.96469603932745,
-        "east": -80.09328768776491,
-        "north": 26.322496635036803,
-        "formatted": "West: -80.339103, South: 25.964696, East: -80.093288, North: 26.322497"
-      }
-    },
-    {
-      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\mobility_hubs.shp",
-      "file_name": "mobility_hubs.shp",
-      "file_extension": ".shp",
-      "last_modified": "2025-09-23T02:12:00",
-      "data_type": "geospatial",
-      "file_size": {
-        "bytes": 3796,
-        "readable": "3.71 KB"
-      },
-      "format": ".shp",
-      "features": [
-        {
-          "name": "OBJECTID_1",
-          "type": "int:10"
-        },
-        {
-          "name": "OBJECTID",
-          "type": "int:10"
-        },
-        {
-          "name": "Id",
-          "type": "int:10"
-        },
-        {
-          "name": "HUB_ID",
-          "type": "str:15"
-        },
-        {
-          "name": "GEN_LOCA",
-          "type": "str:254"
-        },
-        {
-          "name": "CFPv2_HubT",
-          "type": "str:20"
-        },
-        {
-          "name": "SOURCE",
-          "type": "str:50"
-        },
-        {
-          "name": "TriRail",
-          "type": "int32:5"
-        },
-        {
-          "name": "CoastalLin",
-          "type": "int32:5"
-        },
-        {
-          "name": "Hub_ID_1",
-          "type": "str:254"
-        },
-        {
-          "name": "Hub_Locati",
-          "type": "str:254"
-        },
-        {
-          "name": "Typ_Transe",
-          "type": "str:254"
-        },
-        {
-          "name": "Typ_FLU",
-          "type": "str:254"
-        },
-        {
-          "name": "Typ_TransA",
-          "type": "str:254"
-        },
-        {
-          "name": "1a_Produce",
-          "type": "str:254"
-        },
-        {
-          "name": "1a_ZeroCar",
-          "type": "str:254"
-        },
-        {
-          "name": "1a_Attract",
-          "type": "str:254"
-        },
-        {
-          "name": "1a_Trips",
-          "type": "str:254"
-        },
-        {
-          "name": "1a_Score",
-          "type": "float:19.11"
-        },
-        {
-          "name": "1b_Produce",
-          "type": "str:254"
-        },
-        {
-          "name": "1b_Attract",
-          "type": "str:254"
-        },
-        {
-          "name": "1b_Trips",
-          "type": "str:254"
-        },
-        {
-          "name": "1b_Score",
-          "type": "float:19.11"
-        },
-        {
-          "name": "1_Trips",
-          "type": "str:254"
-        },
-        {
-          "name": "1_Score",
-          "type": "float:19.11"
-        },
-        {
-          "name": "1_ScoreCat",
-          "type": "int:10"
-        },
-        {
-          "name": "1_Rank",
-          "type": "int:10"
-        },
-        {
-          "name": "2a_Raw",
-          "type": "str:254"
-        },
-        {
-          "name": "2a_Score",
-          "type": "float:19.11"
-        },
-        {
-          "name": "2a_Rank",
-          "type": "int:10"
-        },
-        {
-          "name": "2b_Raw",
-          "type": "float:19.11"
-        },
-        {
-          "name": "2b_Score",
-          "type": "float:19.11"
-        },
-        {
-          "name": "2b_Rank",
-          "type": "int:10"
-        },
-        {
-          "name": "2_Score",
-          "type": "float:19.11"
-        },
-        {
-          "name": "2_ScoreCat",
-          "type": "int:10"
-        },
-        {
-          "name": "2_Rank",
-          "type": "int:10"
-        },
-        {
-          "name": "3_Raw",
-          "type": "float:19.11"
-        },
-        {
-          "name": "3_Score",
-          "type": "float:19.11"
-        },
-        {
-          "name": "3_ScoreCat",
-          "type": "int:10"
-        },
-        {
-          "name": "3_Rank",
-          "type": "int:10"
-        },
-        {
-          "name": "Crit_Route",
-          "type": "int:10"
-        },
-        {
-          "name": "Crit_Facil",
-          "type": "str:254"
-        },
-        {
-          "name": "Crit_Rail",
-          "type": "str:254"
-        },
-        {
-          "name": "Crit_PR",
-          "type": "str:254"
-        },
-        {
-          "name": "Crit_Trans",
-          "type": "str:254"
-        },
-        {
-          "name": "Crit_Meets",
-          "type": "str:254"
-        },
-        {
-          "name": "Comp_Score",
-          "type": "float:19.11"
-        },
-        {
-          "name": "Comp_Sco_1",
-          "type": "int:10"
-        },
-        {
-          "name": "Comp_Rank",
-          "type": "int:10"
-        },
-        {
-          "name": "LRTP_Rank",
-          "type": "int:10"
-        },
-        {
-          "name": "LRTP_Score",
-          "type": "int:10"
-        },
-        {
-          "name": "LRTP_Type",
-          "type": "str:254"
-        }
-      ],
-      "sample_data": {
-        "OBJECTID_1": [
-          1,
-          2,
-          3,
-          4,
-          5
+        "MINORITY": [
+          4.0
         ],
-        "OBJECTID": [
-          1,
-          2,
-          3,
-          4,
-          5
+        "YOUTH": [
+          1.0,
+          2.0,
+          3.0
         ],
-        "Id": [
-          0
+        "AGE65": [
+          1.0
         ],
-        "HUB_ID": [
-          "GWHUB3",
-          "GWHUB5",
-          "GWHUB4",
-          "GWHUB1",
-          "GWHUB2"
+        "HHPOVERTY": [
+          4.0
         ],
-        "GEN_LOCA": [
-          "Deerfield Beach Tri-Rail Station",
-          "Cypress Creek Tri-Rail Station",
-          "Broward Blvd & NW/SW 1st Ave",
-          "Broward Blvd & University Dr",
-          "Broward Blvd & I-95"
+        "ZEROVEHICL": [
+          1.0,
+          3.0
         ],
-        "CFPv2_HubT": [
-          "Gateway Hub"
-        ],
-        "SOURCE": [
-          "2035 LRTP"
-        ],
-        "TriRail": [
-          0,
-          1
-        ],
-        "CoastalLin": [
-          0,
-          1
-        ],
-        "Hub_ID_1": [
-          "GWHUB3",
-          "GWHUB5",
-          "GWHUB4",
-          "GWHUB1",
-          "GWHUB2"
-        ],
-        "Hub_Locati": [
-          "Cypress Creek & SFRC @ Cypress Creek Tri-Rail Station (Tri-Rail)",
-          "Broward Blvd & I-95 @ Fort Lauderdale Tri-Rail Station (Tri-Rail)",
-          "Broward Blvd & University Dr",
-          "Hillsboro Blvd & SFRC @ Deerfield Beech Tri-Rail Station (Tri-Rail)",
-          "Broward Blvd & NW/SW 1st Ave @ Broward Central Terminal & Brightline Intercity Station  (US 1 Breeze)"
-        ],
-        "Typ_Transe": [
-          "Urban Core",
-          "Suburban Residential",
-          "Suburban Commercial"
-        ],
-        "Typ_FLU": [
-          "Transportation/Commerce /Activity Center",
-          "Commerce",
-          "Activity Center"
-        ],
-        "Typ_TransA": [
-          "Rail Station",
-          "Streetside Transfer"
-        ],
-        "1a_Produce": [
-          "7,376",
-          "13,725",
-          "12,608",
-          "8,497",
-          "31,185"
-        ],
-        "1a_ZeroCar": [
-          "432",
-          "2,801",
-          "62",
-          "1,247",
-          "1,242"
-        ],
-        "1a_Attract": [
-          "33,042",
-          "15,674",
-          "65,933",
-          "171,207",
-          "62,345"
-        ],
-        "1a_Trips": [
-          "76,195",
-          "73,371",
-          "30,645",
-          "41,971",
-          "205,193"
-        ],
-        "1a_Score": [
-          32.1,
-          33.4,
-          13.4,
-          18.4,
-          89.9
-        ],
-        "1b_Produce": [
-          "2,217",
-          "0",
-          "17,217",
-          "511"
-        ],
-        "1b_Attract": [
-          "5,546",
-          "427",
-          "0",
-          "8,826"
-        ],
-        "1b_Trips": [
-          "938",
-          "0",
-          "7,763",
-          "26,043"
-        ],
-        "1b_Score": [
-          0.0,
-          8.9,
-          29.8,
-          1.1
-        ],
-        "1_Trips": [
-          "83,957",
-          "231,236",
-          "73,371",
-          "30,645",
-          "42,909"
-        ],
-        "1_Score": [
-          9.9,
-          14.5,
-          85.0,
-          25.9,
-          29.9
-        ],
-        "1_ScoreCat": [
-          100,
-          40,
-          20
-        ],
-        "1_Rank": [
-          2,
-          134,
-          9,
-          14,
-          81
-        ],
-        "2a_Raw": [
-          "1,367",
-          "1,832",
-          "2,723",
-          "2,909",
-          "18,071"
-        ],
-        "2a_Score": [
-          100.0,
-          7.6,
-          10.1,
-          15.1,
-          16.1
-        ],
-        "2a_Rank": [
-          1,
-          35,
-          7,
-          12,
-          23
-        ],
-        "2b_Raw": [
-          3.3,
-          37.0,
-          9.3,
-          9.5,
-          11.9
-        ],
-        "2b_Score": [
-          32.1,
-          100.0,
-          9.0,
-          25.2,
-          25.7
-        ],
-        "2b_Rank": [
-          1,
-          131,
-          7,
-          17,
-          18
-        ],
-        "2_Score": [
-          100.0,
-          9.8,
-          14.9,
-          18.1,
-          19.0
-        ],
-        "2_ScoreCat": [
-          100,
-          20
-        ],
-        "2_Rank": [
-          1,
-          7,
-          12,
-          19,
-          53
-        ],
-        "3_Raw": [
-          0.0,
+        "NOHSDIPLOM": [
+          1.0,
           2.0
         ],
-        "3_Score": [
-          0.0,
-          20.0
+        "FEMALEHH": [
+          1.0,
+          2.0
         ],
-        "3_ScoreCat": [
-          0,
-          20
+        "LEP": [
+          1.0,
+          2.0,
+          3.0
         ],
-        "3_Rank": [
-          33,
-          50
+        "DISABILITY": [
+          1.0,
+          2.0,
+          3.0
         ],
-        "Crit_Route": [
-          2,
-          4,
-          5,
-          15
+        "POVERTY_IN": [
+          1.0,
+          2.0
         ],
-        "Crit_Facil": [
-          "Transfer",
-          "Rail"
+        "RACIAL": [
+          1.0,
+          2.0
         ],
-        "Crit_Rail": [
-          "Y"
+        "ETHNIC": [
+          1.0,
+          2.0,
+          3.0
         ],
-        "Crit_PR": [],
-        "Crit_Trans": [
-          "Y"
+        "FOREIGN_BO": [
+          4.0
         ],
-        "Crit_Meets": [
-          "Y"
+        "SELECTEDCO": [
+          1.0
         ],
-        "Comp_Score": [
-          92.5,
-          12.2,
-          14.0,
-          22.4
-        ],
-        "Comp_Sco_1": [
-          100,
-          40,
-          20
-        ],
-        "Comp_Rank": [
-          1,
-          71,
-          10,
-          11,
-          52
-        ],
-        "LRTP_Rank": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "LRTP_Score": [
-          12,
-          13,
-          14,
-          15
-        ],
-        "LRTP_Type": [
-          "GW"
-        ]
-      },
-      "applicable_operations": [
-        "Spatial query/filter",
-        "Spatial join (with other layers)",
-        "Clip/Intersect (with boundary)",
-        "Buffer analysis",
-        "Reproject/Transform CRS",
-        "Export to different format",
-        "Point density/heatmap",
-        "Nearest neighbor analysis",
-        "Cluster analysis",
-        "Voronoi diagram",
-        "Thiessen polygons",
-        "Dissolve/Group by categorical attributes: HUB_ID, GEN_LOCA, CFPv2_HubT",
-        "Symbolize by categories: HUB_ID, GEN_LOCA, CFPv2_HubT",
-        "Calculate statistics for: OBJECTID_1, OBJECTID, Id",
-        "Choropleth mapping by: OBJECTID_1, OBJECTID, Id"
-      ],
-      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
-      "geometry_type": "Point",
-      "feature_count": 132,
-      "bounds": [
-        861243.4290904999,
-        598407.9029632509,
-        954181.0001047514,
-        722370.9401416704
-      ],
-      "bounds_latlon": {
-        "west": -80.37574626638984,
-        "south": 25.978620983514034,
-        "east": -80.0902265240704,
-        "north": 26.318142181924127,
-        "formatted": "West: -80.375746, South: 25.978621, East: -80.090227, North: 26.318142"
-      }
-    },
-    {
-      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\port_everglades.shp",
-      "file_name": "port_everglades.shp",
-      "file_extension": ".shp",
-      "last_modified": "2025-09-23T02:12:00",
-      "data_type": "geospatial",
-      "file_size": {
-        "bytes": 2612,
-        "readable": "2.55 KB"
-      },
-      "format": ".shp",
-      "features": [
-        {
-          "name": "OBJECTID",
-          "type": "int:10"
-        },
-        {
-          "name": "BPC_BCFUTU",
-          "type": "float:19.11"
-        },
-        {
-          "name": "SLUC1",
-          "type": "int:10"
-        },
-        {
-          "name": "ACRES",
-          "type": "float:19.11"
-        },
-        {
-          "name": "DENSITY",
-          "type": "str:10"
-        },
-        {
-          "name": "SHAPE_AREA",
-          "type": "float:19.11"
-        },
-        {
-          "name": "SHAPE_LEN",
-          "type": "float:19.11"
-        }
-      ],
-      "sample_data": {
-        "OBJECTID": [
-          2542
-        ],
-        "BPC_BCFUTU": [
-          2342913.07364
-        ],
-        "SLUC1": [
-          70
-        ],
-        "ACRES": [
-          3153.17791427
-        ],
-        "DENSITY": [],
-        "SHAPE_AREA": [
-          137351880.536
-        ],
-        "SHAPE_LEN": [
-          100725.043342
+        "TOTALCOMPO": [
+          1.0,
+          2.0
         ]
       },
       "applicable_operations": [
@@ -951,33 +358,33 @@
         "Simplify geometry",
         "Calculate centroid",
         "Zonal statistics (with raster)",
-        "Dissolve/Group by categorical attributes: DENSITY",
-        "Symbolize by categories: DENSITY",
-        "Calculate statistics for: OBJECTID, BPC_BCFUTU, SLUC1",
-        "Choropleth mapping by: OBJECTID, BPC_BCFUTU, SLUC1"
+        "Dissolve/Group by categorical attributes: BLOCKGROUP",
+        "Symbolize by categories: BLOCKGROUP",
+        "Calculate statistics for: SHAPE_LENG, SHAPE_AREA, MINORITY",
+        "Choropleth mapping by: SHAPE_LENG, SHAPE_AREA, MINORITY"
       ],
-      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "crs": "EPSG:4326",
       "geometry_type": "Polygon",
-      "feature_count": 1,
+      "feature_count": 1120,
       "bounds": [
-        937279.3865983352,
-        628657.7850487044,
-        946881.4845201113,
-        643234.9842406957
+        -80.44975476520877,
+        25.95677473053175,
+        -80.01527864305316,
+        26.355551831053173
       ],
       "bounds_latlon": {
-        "west": -80.143705882061,
-        "south": 26.060656563238766,
-        "east": -80.11415788098917,
-        "north": 26.100582140131227,
-        "formatted": "West: -80.143706, South: 26.060657, East: -80.114158, North: 26.100582"
+        "west": -80.44975476520877,
+        "south": 25.95677473053175,
+        "east": -80.01527864305316,
+        "north": 26.355551831053173,
+        "formatted": "West: -80.449755, South: 25.956775, East: -80.015279, North: 26.355552"
       }
     },
     {
-      "file_path": "C:\\Users\\gaosh\\UFL Dropbox\\Shangde Gao\\BMPO Ranking Tool\\GIS Data\\Regional Activity Centers\\rac.shp",
-      "file_name": "rac.shp",
+      "file_path": "/Users/shangdegao/PostGIS/regional_activity_centers.shp",
+      "file_name": "regional_activity_centers.shp",
       "file_extension": ".shp",
-      "last_modified": "2025-09-23T02:12:00",
+      "last_modified": "2025-12-19T11:56:48",
       "data_type": "geospatial",
       "file_size": {
         "bytes": 152804,
@@ -987,19 +394,19 @@
       "features": [
         {
           "name": "OBJECTID",
-          "type": "int:10"
+          "type": "float:32.10"
         },
         {
           "name": "BPC_BCFUTU",
-          "type": "float:19.11"
+          "type": "float:32.10"
         },
         {
           "name": "SLUC1",
-          "type": "int:10"
+          "type": "float:32.10"
         },
         {
           "name": "ACRES",
-          "type": "float:19.11"
+          "type": "float:32.10"
         },
         {
           "name": "DENSITY",
@@ -1007,15 +414,15 @@
         },
         {
           "name": "SHAPE_AREA",
-          "type": "float:19.11"
+          "type": "float:32.10"
         },
         {
           "name": "SHAPE_LEN",
-          "type": "float:19.11"
+          "type": "float:32.10"
         },
         {
           "name": "PERIMETER",
-          "type": "float:19.8"
+          "type": "float:32.10"
         },
         {
           "name": "UPDATED",
@@ -1031,7 +438,7 @@
         },
         {
           "name": "ACREAGE",
-          "type": "float:19.8"
+          "type": "float:32.10"
         },
         {
           "name": "CITY",
@@ -1067,14 +474,76 @@
         },
         {
           "name": "SQMILES",
-          "type": "float:19.8"
+          "type": "float:32.10"
         },
         {
           "name": "ROTATE",
-          "type": "float:19.8"
+          "type": "float:32.10"
         }
       ],
-      "sample_data": {},
+      "sample_data": {
+        "OBJECTID": [
+          2849.0,
+          1833.0,
+          586.0,
+          2542.0,
+          7728.0
+        ],
+        "BPC_BCFUTU": [
+          0.0,
+          2342913.07364,
+          851773.825041
+        ],
+        "SLUC1": [
+          100.0,
+          70.0
+        ],
+        "ACRES": [
+          32.66845577,
+          234.44862116,
+          3153.17791427,
+          145.34161175,
+          440.40111053
+        ],
+        "DENSITY": [],
+        "SHAPE_AREA": [
+          137351880.536,
+          6331055.28362,
+          19183795.6391,
+          1423032.24118,
+          10212541.0872
+        ],
+        "SHAPE_LEN": [
+          11236.7068002,
+          6095.64710445,
+          12885.6927828,
+          100725.043342,
+          28822.8694576
+        ],
+        "PERIMETER": [
+          0.0
+        ],
+        "UPDATED": [],
+        "UPDATE_MET": [],
+        "NAME_GIS": [],
+        "ACREAGE": [
+          0.0
+        ],
+        "CITY": [],
+        "LAYOUT": [],
+        "NOTE": [],
+        "NAME": [],
+        "NAMEALTERN": [],
+        "TYPE": [],
+        "PPA": [],
+        "FUNDING2": [],
+        "SQMILES": [
+          0.0
+        ],
+        "ROTATE": [
+          0.0
+        ]
+      },
       "applicable_operations": [
         "Spatial query/filter",
         "Spatial join (with other layers)",
@@ -1093,24 +562,1759 @@
         "Calculate statistics for: OBJECTID, BPC_BCFUTU, SLUC1",
         "Choropleth mapping by: OBJECTID, BPC_BCFUTU, SLUC1"
       ],
-      "crs": "PROJCS[\"NAD83(HARN) / Florida East (ftUS)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",24.3333333333333],PARAMETER[\"central_meridian\",-81],PARAMETER[\"scale_factor\",0.999941176470588],PARAMETER[\"false_easting\",656166.666666667],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.304800609601219,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "crs": "EPSG:4326",
       "geometry_type": "Polygon",
       "feature_count": 69,
       "bounds": [
-        873307.0932833441,
-        593405.7574557737,
-        959428.5833333321,
-        723946.73324994
+        -80.33808818509081,
+        25.964512005266936,
+        -80.07418519735558,
+        26.322512309103246
       ],
       "bounds_latlon": {
-        "west": -80.33910311206994,
-        "south": 25.96469603932745,
-        "east": -80.07417392943225,
-        "north": 26.32237448153021,
-        "formatted": "West: -80.339103, South: 25.964696, East: -80.074174, North: 26.322374"
+        "west": -80.33808818509081,
+        "south": 25.964512005266936,
+        "east": -80.07418519735558,
+        "north": 26.322512309103246,
+        "formatted": "West: -80.338088, South: 25.964512, East: -80.074185, North: 26.322512"
+      }
+    },
+    {
+      "file_path": "/Users/shangdegao/PostGIS/schools.shp",
+      "file_name": "schools.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-12-19T11:56:48",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 6092,
+        "readable": "5.95 KB"
       },
-      "sampling_warning": "Could not sample data: year 0 is out of range"
+      "format": ".shp",
+      "features": [
+        {
+          "name": "OBJECTID_1",
+          "type": "int32:6"
+        },
+        {
+          "name": "JOIN_COUNT",
+          "type": "int32:6"
+        },
+        {
+          "name": "TARGET_FID",
+          "type": "int32:6"
+        },
+        {
+          "name": "OBJECTID",
+          "type": "str:1"
+        },
+        {
+          "name": "ZIP",
+          "type": "int:11"
+        },
+        {
+          "name": "TYPE",
+          "type": "str:4"
+        },
+        {
+          "name": "LOC_NO",
+          "type": "str:4"
+        },
+        {
+          "name": "IZONE",
+          "type": "str:21"
+        },
+        {
+          "name": "YEAR",
+          "type": "int32:6"
+        },
+        {
+          "name": "PLAN_AREA",
+          "type": "str:1"
+        },
+        {
+          "name": "CITY",
+          "type": "str:16"
+        },
+        {
+          "name": "PHONE",
+          "type": "str:12"
+        },
+        {
+          "name": "NAME",
+          "type": "str:44"
+        },
+        {
+          "name": "ADDRESS",
+          "type": "str:29"
+        },
+        {
+          "name": "SCHOOL_ARE",
+          "type": "str:1"
+        },
+        {
+          "name": "BOUNDERED",
+          "type": "str:16"
+        },
+        {
+          "name": "FAX",
+          "type": "str:8"
+        },
+        {
+          "name": "CITY_ID",
+          "type": "str:2"
+        },
+        {
+          "name": "SPATIAL_CI",
+          "type": "str:1"
+        },
+        {
+          "name": "SBMDISTRIC",
+          "type": "str:1"
+        },
+        {
+          "name": "IZONE_AREA",
+          "type": "str:17"
+        },
+        {
+          "name": "NEAR_FID",
+          "type": "int32:6"
+        },
+        {
+          "name": "NEAR_DIST",
+          "type": "float:32.10"
+        },
+        {
+          "name": "DEMOGRAPHE",
+          "type": "str:1"
+        },
+        {
+          "name": "ALTERNATE_",
+          "type": "str:1"
+        },
+        {
+          "name": "PSD_COMMIS",
+          "type": "float:32.10"
+        },
+        {
+          "name": "PERIMETER",
+          "type": "str:1"
+        },
+        {
+          "name": "DISTRICT",
+          "type": "int32:6"
+        },
+        {
+          "name": "NAME_1",
+          "type": "str:18"
+        },
+        {
+          "name": "DISTRICTID",
+          "type": "str:1"
+        },
+        {
+          "name": "WEBSITE",
+          "type": "str:62"
+        }
+      ],
+      "sample_data": {
+        "OBJECTID_1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "JOIN_COUNT": [
+          1
+        ],
+        "TARGET_FID": [
+          387,
+          484,
+          522,
+          343,
+          346
+        ],
+        "OBJECTID": [],
+        "ZIP": [
+          33060,
+          33311,
+          33009,
+          33076,
+          33023
+        ],
+        "TYPE": [
+          "MIDD",
+          "ELEM",
+          "CBEM",
+          "CBMH"
+        ],
+        "LOC_NO": [
+          "0371",
+          "2561",
+          "1171",
+          "3221",
+          "0131"
+        ],
+        "IZONE": [
+          "Dillard Zone",
+          "Miramar Zone",
+          "Stoneman Douglas, Ma*",
+          "Hallandale Zone",
+          "Ely, Blanche Zone"
+        ],
+        "YEAR": [
+          1960,
+          1964,
+          2005,
+          1975,
+          1950
+        ],
+        "PLAN_AREA": [
+          "B",
+          "F",
+          "A",
+          "E",
+          "G"
+        ],
+        "CITY": [
+          "CORAL SPRINGS",
+          "POMPANO BEACH",
+          "FORT LAUDERDALE",
+          "HALLANDALE",
+          "MIRAMAR"
+        ],
+        "PHONE": [
+          "754-323-5950",
+          "754-322-6250",
+          "754-322-0800",
+          "754-323-7700",
+          "754-322-3000"
+        ],
+        "NAME": [
+          "SUNSHINE ELEMENTARY",
+          "DREW, CHARLES ELEMENTARY",
+          "DILLARD 6-12",
+          "GULFSTREAM ACADEMY OF HALLANDALE BEACH",
+          "CORAL SPRINGS MIDDLE"
+        ],
+        "ADDRESS": [
+          "2501 NW 11 STREET",
+          "1000 NW 31 AVENUE",
+          "7737 W LASALLE BOULEVARD",
+          "10300 W WILES ROAD",
+          "900 SW 8TH STREET"
+        ],
+        "SCHOOL_ARE": [],
+        "BOUNDERED": [
+          "Boundered"
+        ],
+        "FAX": [],
+        "CITY_ID": [
+          "CS",
+          "MM",
+          "FL",
+          "PB",
+          "HD"
+        ],
+        "SPATIAL_CI": [],
+        "SBMDISTRIC": [],
+        "IZONE_AREA": [
+          "Central Area Zone",
+          "South Area Zone",
+          "North Area Zone"
+        ],
+        "NEAR_FID": [
+          1,
+          -1
+        ],
+        "NEAR_DIST": [
+          42066.44334465,
+          41821.57558539,
+          -1.0
+        ],
+        "DEMOGRAPHE": [],
+        "ALTERNATE_": [],
+        "PSD_COMMIS": [
+          34.23013975,
+          44.55421107,
+          50.65218944,
+          47.14470992
+        ],
+        "PERIMETER": [],
+        "DISTRICT": [
+          8,
+          9,
+          2,
+          3
+        ],
+        "NAME_1": [
+          "Michael Udine",
+          "Mark David Bogen",
+          "Dale V. C. Holness",
+          "Barbara Sharief"
+        ],
+        "DISTRICTID": [
+          "3",
+          "8",
+          "9",
+          "2"
+        ],
+        "WEBSITE": [
+          "http://www.broward.org/Commission/District8/Pages/Default.aspx",
+          "http://www.broward.org/Commission/District3/Pages/Default.aspx",
+          "http://www.broward.org/Commission/District9/Pages/Default.aspx",
+          "http://www.broward.org/Commission/District2/Pages/Default.aspx"
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Point density/heatmap",
+        "Nearest neighbor analysis",
+        "Cluster analysis",
+        "Voronoi diagram",
+        "Thiessen polygons",
+        "Dissolve/Group by categorical attributes: OBJECTID, TYPE, LOC_NO",
+        "Symbolize by categories: OBJECTID, TYPE, LOC_NO",
+        "Calculate statistics for: OBJECTID_1, JOIN_COUNT, TARGET_FID",
+        "Choropleth mapping by: OBJECTID_1, JOIN_COUNT, TARGET_FID"
+      ],
+      "crs": "EPSG:4326",
+      "geometry_type": "Point",
+      "feature_count": 214,
+      "bounds": [
+        -80.4299807137333,
+        25.962393839305435,
+        -80.09380345716104,
+        26.325100217572416
+      ],
+      "bounds_latlon": {
+        "west": -80.4299807137333,
+        "south": 25.962393839305435,
+        "east": -80.09380345716104,
+        "north": 26.325100217572416,
+        "formatted": "West: -80.429981, South: 25.962394, East: -80.093803, North: 26.325100"
+      }
+    },
+    {
+      "file_path": "/Users/shangdegao/PostGIS/parks.shp",
+      "file_name": "parks.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-12-19T11:56:48",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 18064976,
+        "readable": "17.23 MB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "OBJECTID",
+          "type": "int32:6"
+        },
+        {
+          "name": "UNIT_ID",
+          "type": "str:6"
+        },
+        {
+          "name": "SITE_NAME",
+          "type": "str:83"
+        },
+        {
+          "name": "DISTRICT",
+          "type": "int32:6"
+        },
+        {
+          "name": "UPLAND",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SUBMERGED",
+          "type": "float:32.10"
+        },
+        {
+          "name": "PUBLIC_ACC",
+          "type": "str:31"
+        },
+        {
+          "name": "ACREAGE",
+          "type": "float:32.10"
+        },
+        {
+          "name": "COUNTY",
+          "type": "str:36"
+        },
+        {
+          "name": "URL",
+          "type": "str:126"
+        },
+        {
+          "name": "ADDRESS",
+          "type": "str:70"
+        },
+        {
+          "name": "WEB_ALIAS",
+          "type": "str:31"
+        },
+        {
+          "name": "ABBREVIATI",
+          "type": "str:4"
+        },
+        {
+          "name": "SHAPEAREA",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPELEN",
+          "type": "float:32.10"
+        },
+        {
+          "name": "PARKNAME",
+          "type": "str:40"
+        },
+        {
+          "name": "ADDRESS1",
+          "type": "str:40"
+        },
+        {
+          "name": "ADDRESS2",
+          "type": "str:40"
+        },
+        {
+          "name": "CITY",
+          "type": "str:45"
+        },
+        {
+          "name": "ZIP_POSTAL",
+          "type": "str:8"
+        },
+        {
+          "name": "PARKTYPE",
+          "type": "str:6"
+        },
+        {
+          "name": "ACRES",
+          "type": "float:32.10"
+        },
+        {
+          "name": "AREA",
+          "type": "float:32.10"
+        },
+        {
+          "name": "LEN",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPE_LEN",
+          "type": "float:32.10"
+        }
+      ],
+      "sample_data": {
+        "OBJECTID": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "UNIT_ID": [
+          "S00087",
+          "S00061",
+          "S00076",
+          "S00088",
+          "S00059"
+        ],
+        "SITE_NAME": [
+          "Tomoka State Park",
+          "Lake Manatee State Park",
+          "Ochlockonee River State Park",
+          "Lake Kissimmee State Park",
+          "Olustee Battlefield Historic State Park"
+        ],
+        "DISTRICT": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "UPLAND": [
+          523.19000244,
+          526.20001221,
+          691.09002686,
+          5621.20996094,
+          1497.42004395
+        ],
+        "SUBMERGED": [
+          0.0,
+          15.13000011,
+          271.92001343,
+          22.57999992,
+          122.68000031
+        ],
+        "PUBLIC_ACC": [
+          "Open-No Fee Required",
+          "Open-Fee Required"
+        ],
+        "ACREAGE": [
+          548.85457068,
+          5893.22681214,
+          617.04916254,
+          538.35901074,
+          1627.99757036
+        ],
+        "COUNTY": [
+          "Baker",
+          "Volusia",
+          "Polk, Osceola",
+          "Manatee",
+          "Wakulla"
+        ],
+        "URL": [
+          "https://www.floridastateparks.org/parks-and-trails/lake-kissimmee-state-park",
+          "https://www.floridastateparks.org/parks-and-trails/olustee-battlefield-historic-state-park",
+          "https://www.floridastateparks.org/parks-and-trails/lake-manatee-state-park",
+          "https://www.floridastateparks.org/parks-and-trails/tomoka-state-park",
+          "https://www.floridastateparks.org/parks-and-trails/ochlockonee-river-state-park"
+        ],
+        "ADDRESS": [
+          "5815 Battlefield Trail Rd. Olustee, Fl 32087",
+          "429 State Park Rd Sopchoppy, Fl 32358 Po Box 5",
+          "20007 Sr 64 Bradenton, Fl 34202",
+          "2099 N Beach St Ormond Beach, Fl 32174",
+          "14248 Camp Mack Rd Lake Wales, Fl 33898"
+        ],
+        "WEB_ALIAS": [
+          "Lake-Manatee",
+          "Tomoka",
+          "Ochlockonee-River",
+          "Lake-Kissimmee",
+          "Olustee-Battlefield"
+        ],
+        "ABBREVIATI": [
+          "OLB",
+          "TM",
+          "LK",
+          "OR",
+          "LAM"
+        ],
+        "SHAPEAREA": [
+          2178661.62018,
+          2221135.64433,
+          6588272.42327,
+          23849042.7734,
+          2497109.36638
+        ],
+        "SHAPELEN": [
+          25728.1173783,
+          9641.24403718,
+          14607.006819,
+          9624.77673451,
+          32409.3538209
+        ],
+        "PARKNAME": [],
+        "ADDRESS1": [],
+        "ADDRESS2": [],
+        "CITY": [],
+        "ZIP_POSTAL": [],
+        "PARKTYPE": [],
+        "ACRES": [
+          0.0
+        ],
+        "AREA": [
+          0.0
+        ],
+        "LEN": [
+          0.0
+        ],
+        "SHAPE_AREA": [
+          0.0
+        ],
+        "SHAPE_LEN": [
+          0.0
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Calculate area",
+        "Dissolve by attribute",
+        "Union/Merge polygons",
+        "Simplify geometry",
+        "Calculate centroid",
+        "Zonal statistics (with raster)",
+        "Dissolve/Group by categorical attributes: UNIT_ID, SITE_NAME, PUBLIC_ACC",
+        "Symbolize by categories: UNIT_ID, SITE_NAME, PUBLIC_ACC",
+        "Calculate statistics for: OBJECTID, DISTRICT, UPLAND",
+        "Choropleth mapping by: OBJECTID, DISTRICT, UPLAND"
+      ],
+      "crs": "EPSG:4326",
+      "geometry_type": "Polygon",
+      "feature_count": 901,
+      "bounds": [
+        -87.48612534692126,
+        24.543962506048008,
+        -80.03530481185632,
+        30.827585850213158
+      ],
+      "bounds_latlon": {
+        "west": -87.48612534692126,
+        "south": 24.543962506048008,
+        "east": -80.03530481185632,
+        "north": 30.827585850213158,
+        "formatted": "West: -87.486125, South: 24.543963, East: -80.035305, North: 30.827586"
+      }
+    },
+    {
+      "file_path": "/Users/shangdegao/PostGIS/transit_stops.shp",
+      "file_name": "transit_stops.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-12-19T11:56:47",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 128732,
+        "readable": "125.71 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "ID",
+          "type": "int:11"
+        },
+        {
+          "name": "NAME",
+          "type": "str:50"
+        },
+        {
+          "name": "ADDRESS",
+          "type": "str:65"
+        },
+        {
+          "name": "CONNECTION",
+          "type": "str:210"
+        },
+        {
+          "name": "CITY",
+          "type": "str:25"
+        },
+        {
+          "name": "COUNTY",
+          "type": "str:12"
+        },
+        {
+          "name": "NOTES",
+          "type": "str:200"
+        },
+        {
+          "name": "ENTRY_DATE",
+          "type": "str:8"
+        },
+        {
+          "name": "TEMPNAME",
+          "type": "str:65"
+        },
+        {
+          "name": "STOP_ID",
+          "type": "str:5"
+        },
+        {
+          "name": "MAIN_STREE",
+          "type": "str:254"
+        },
+        {
+          "name": "CROSS_STRE",
+          "type": "str:254"
+        },
+        {
+          "name": "DIRECTION",
+          "type": "str:254"
+        },
+        {
+          "name": "LOCATION",
+          "type": "str:254"
+        },
+        {
+          "name": "DISTANCE",
+          "type": "float:32.10"
+        },
+        {
+          "name": "MUNICIPALI",
+          "type": "str:254"
+        },
+        {
+          "name": "COUNTY_ZON",
+          "type": "str:254"
+        },
+        {
+          "name": "DAILY_BOAR",
+          "type": "float:32.10"
+        },
+        {
+          "name": "DAILY_ALIG",
+          "type": "float:32.10"
+        },
+        {
+          "name": "BUS_BAY",
+          "type": "str:254"
+        },
+        {
+          "name": "RIGHT_TURN",
+          "type": "str:254"
+        },
+        {
+          "name": "BENCH",
+          "type": "str:254"
+        },
+        {
+          "name": "BIKE_RACK",
+          "type": "str:254"
+        },
+        {
+          "name": "TRASH_CAN",
+          "type": "str:254"
+        },
+        {
+          "name": "REAL_TIME_",
+          "type": "str:254"
+        },
+        {
+          "name": "SHELTER",
+          "type": "str:254"
+        },
+        {
+          "name": "SOLAR_LIGH",
+          "type": "str:254"
+        },
+        {
+          "name": "ID_STICKER",
+          "type": "str:254"
+        },
+        {
+          "name": "ADA_STICKE",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_1",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_2",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_4",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_5",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_6",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_7",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_9",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_10",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_11",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_12",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_14",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_15",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_16",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_18",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_19",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_20",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_22",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_23",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_28",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_30",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_31",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_34",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_36",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_40",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_42",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_48",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_50",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_55",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_56",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_60",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_62",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_72",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_81",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_83",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_88",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_101",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_102",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_106",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_107",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_108",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_109",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_110",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_114",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_122",
+          "type": "str:254"
+        },
+        {
+          "name": "ROUTE_441",
+          "type": "str:254"
+        },
+        {
+          "name": "RIGHT_OF_W",
+          "type": "str:254"
+        },
+        {
+          "name": "RIGHT_OF_1",
+          "type": "float:32.10"
+        },
+        {
+          "name": "CURB",
+          "type": "str:254"
+        },
+        {
+          "name": "SIDEWALK",
+          "type": "str:254"
+        },
+        {
+          "name": "SIDEWALK_W",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SIDEWALK_C",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SIDEWALK_R",
+          "type": "str:254"
+        },
+        {
+          "name": "CONNECTOR",
+          "type": "str:254"
+        },
+        {
+          "name": "CONNECTOR_",
+          "type": "float:32.10"
+        },
+        {
+          "name": "CONNECTOR1",
+          "type": "float:32.10"
+        },
+        {
+          "name": "CONNECTO_1",
+          "type": "str:254"
+        },
+        {
+          "name": "CONNECTO_2",
+          "type": "str:254"
+        },
+        {
+          "name": "LANDING_PA",
+          "type": "str:254"
+        },
+        {
+          "name": "LANDING__1",
+          "type": "float:32.10"
+        },
+        {
+          "name": "LANDING__2",
+          "type": "float:32.10"
+        },
+        {
+          "name": "LANDING__3",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHELTER_PA",
+          "type": "str:254"
+        },
+        {
+          "name": "SHELTER__1",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHELTER__2",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHELTER__3",
+          "type": "str:254"
+        },
+        {
+          "name": "SHELTER__4",
+          "type": "str:254"
+        },
+        {
+          "name": "ADA_CLASSI",
+          "type": "str:254"
+        },
+        {
+          "name": "ADA_IMPROV",
+          "type": "str:254"
+        },
+        {
+          "name": "DESIGN",
+          "type": "str:254"
+        },
+        {
+          "name": "FIELD_REVI",
+          "type": "date"
+        },
+        {
+          "name": "CONSTRUCTI",
+          "type": "str:254"
+        },
+        {
+          "name": "CONSTRUC_1",
+          "type": "date"
+        },
+        {
+          "name": "CONSTRUC_2",
+          "type": "date"
+        },
+        {
+          "name": "LONGITUDE",
+          "type": "float:32.10"
+        },
+        {
+          "name": "LATITUDE",
+          "type": "float:32.10"
+        },
+        {
+          "name": "COORDINATE",
+          "type": "float:32.10"
+        },
+        {
+          "name": "COORDINA_1",
+          "type": "float:32.10"
+        },
+        {
+          "name": "HYPERLINK",
+          "type": "str:254"
+        },
+        {
+          "name": "LAST_UPDAT",
+          "type": "date"
+        },
+        {
+          "name": "COMMENTS",
+          "type": "str:254"
+        },
+        {
+          "name": "STOP_ID_IN",
+          "type": "int:11"
+        }
+      ],
+      "sample_data": {
+        "ID": [
+          0
+        ],
+        "NAME": [
+          "Hialeah Market Station",
+          "Golden Glades Station\r\n",
+          "Miami Airport Station",
+          "Opa-locka Station",
+          "Metrorail Transfer Station\r\n"
+        ],
+        "ADDRESS": [
+          "3797 Northwest 21th St",
+          "16000 North State Road 9",
+          "2567 East 11th Avenue",
+          "480 Ali Baba Avenue",
+          "1200 Southeast 11th Avenue"
+        ],
+        "CONNECTION": [
+          "Miami-Dade Transit Routes L, 42, and 500 (Midnight Owl)",
+          "Tri-Rail Shuttle: NW 36th Street/Koger Shuttle • Miami-Dade Transit Routes J, 36, 42 and 46 (Liberty City Connector).",
+          "Broward County Transit Route 2, 18 & 18 Limited • Miami-Dade Transit Routes E, V, 22, 42, 77, North-Dade Connection, 95 Express (Free transfer is not applicable to Express Route) & 246 (Night Owl)",
+          "Tri-Rail Shuttle: MIA Airport Shuttle • Miami-Dade Transit Route 37, 57, 236 (Airport Owl), & 238 (East/West Connection). Parking and cab service available.",
+          "Miami-Dade Transit Routes E, 32 and 42"
+        ],
+        "CITY": [
+          "Hialeah",
+          "Miami",
+          "North Miami"
+        ],
+        "COUNTY": [
+          "Miami-Dade"
+        ],
+        "NOTES": [
+          "Limited parking and cab service available. This is a Metrorail Transfer Station.",
+          "Parking and cab service available. Passengers must access Route J and 36 from 36th Street. For MDT Route 42, passengers must walk to LeJeune Road to access this bus.",
+          "Parking and cab service available.",
+          "Park & Ride lot, Greyhound and cab service available."
+        ],
+        "ENTRY_DATE": [
+          "04/27/06"
+        ],
+        "TEMPNAME": [
+          "Golden Glades \r\n",
+          "Miami Airport",
+          "Metrorail Transfer\r\n",
+          "Opa-locka",
+          "Hialeah Mkt."
+        ],
+        "STOP_ID": [],
+        "MAIN_STREE": [],
+        "CROSS_STRE": [],
+        "DIRECTION": [],
+        "LOCATION": [],
+        "DISTANCE": [
+          0.0
+        ],
+        "MUNICIPALI": [],
+        "COUNTY_ZON": [],
+        "DAILY_BOAR": [
+          0.0
+        ],
+        "DAILY_ALIG": [
+          0.0
+        ],
+        "BUS_BAY": [],
+        "RIGHT_TURN": [],
+        "BENCH": [],
+        "BIKE_RACK": [],
+        "TRASH_CAN": [],
+        "REAL_TIME_": [],
+        "SHELTER": [],
+        "SOLAR_LIGH": [],
+        "ID_STICKER": [],
+        "ADA_STICKE": [],
+        "ROUTE_1": [],
+        "ROUTE_2": [],
+        "ROUTE_4": [],
+        "ROUTE_5": [],
+        "ROUTE_6": [],
+        "ROUTE_7": [],
+        "ROUTE_9": [],
+        "ROUTE_10": [],
+        "ROUTE_11": [],
+        "ROUTE_12": [],
+        "ROUTE_14": [],
+        "ROUTE_15": [],
+        "ROUTE_16": [],
+        "ROUTE_18": [],
+        "ROUTE_19": [],
+        "ROUTE_20": [],
+        "ROUTE_22": [],
+        "ROUTE_23": [],
+        "ROUTE_28": [],
+        "ROUTE_30": [],
+        "ROUTE_31": [],
+        "ROUTE_34": [],
+        "ROUTE_36": [],
+        "ROUTE_40": [],
+        "ROUTE_42": [],
+        "ROUTE_48": [],
+        "ROUTE_50": [],
+        "ROUTE_55": [],
+        "ROUTE_56": [],
+        "ROUTE_60": [],
+        "ROUTE_62": [],
+        "ROUTE_72": [],
+        "ROUTE_81": [],
+        "ROUTE_83": [],
+        "ROUTE_88": [],
+        "ROUTE_101": [],
+        "ROUTE_102": [],
+        "ROUTE_106": [],
+        "ROUTE_107": [],
+        "ROUTE_108": [],
+        "ROUTE_109": [],
+        "ROUTE_110": [],
+        "ROUTE_114": [],
+        "ROUTE_122": [],
+        "ROUTE_441": [],
+        "RIGHT_OF_W": [],
+        "RIGHT_OF_1": [
+          0.0
+        ],
+        "CURB": [],
+        "SIDEWALK": [],
+        "SIDEWALK_W": [
+          0.0
+        ],
+        "SIDEWALK_C": [
+          0.0
+        ],
+        "SIDEWALK_R": [],
+        "CONNECTOR": [],
+        "CONNECTOR_": [
+          0.0
+        ],
+        "CONNECTOR1": [
+          0.0
+        ],
+        "CONNECTO_1": [],
+        "CONNECTO_2": [],
+        "LANDING_PA": [],
+        "LANDING__1": [
+          0.0
+        ],
+        "LANDING__2": [
+          0.0
+        ],
+        "LANDING__3": [
+          0.0
+        ],
+        "SHELTER_PA": [],
+        "SHELTER__1": [
+          0.0
+        ],
+        "SHELTER__2": [
+          0.0
+        ],
+        "SHELTER__3": [],
+        "SHELTER__4": [],
+        "ADA_CLASSI": [],
+        "ADA_IMPROV": [],
+        "DESIGN": [],
+        "FIELD_REVI": [],
+        "CONSTRUCTI": [],
+        "CONSTRUC_1": [],
+        "CONSTRUC_2": [],
+        "LONGITUDE": [
+          0.0
+        ],
+        "LATITUDE": [
+          0.0
+        ],
+        "COORDINATE": [
+          0.0
+        ],
+        "COORDINA_1": [
+          0.0
+        ],
+        "HYPERLINK": [],
+        "LAST_UPDAT": [],
+        "COMMENTS": [],
+        "STOP_ID_IN": [
+          0
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Point density/heatmap",
+        "Nearest neighbor analysis",
+        "Cluster analysis",
+        "Voronoi diagram",
+        "Thiessen polygons",
+        "Dissolve/Group by categorical attributes: NAME, ADDRESS, CONNECTION",
+        "Symbolize by categories: NAME, ADDRESS, CONNECTION",
+        "Calculate statistics for: ID, DISTANCE, DAILY_BOAR",
+        "Choropleth mapping by: ID, DISTANCE, DAILY_BOAR"
+      ],
+      "crs": "EPSG:4326",
+      "geometry_type": "Point",
+      "feature_count": 4594,
+      "bounds": [
+        -80.42904724327505,
+        25.761785103741264,
+        -80.06245103651324,
+        26.758338825351156
+      ],
+      "bounds_latlon": {
+        "west": -80.42904724327505,
+        "south": 25.761785103741264,
+        "east": -80.06245103651324,
+        "north": 26.758338825351156,
+        "formatted": "West: -80.429047, South: 25.761785, East: -80.062451, North: 26.758339"
+      }
+    },
+    {
+      "file_path": "/Users/shangdegao/PostGIS/integrated_decision_units.shp",
+      "file_name": "integrated_decision_units.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-12-19T11:56:48",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 95628,
+        "readable": "93.39 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "VALUE_GSD",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPE_LENG",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPE_LE_1",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPE_AREA",
+          "type": "float:32.10"
+        },
+        {
+          "name": "INPOLY_FID",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SIMPGNFLAG",
+          "type": "int:11"
+        },
+        {
+          "name": "MAXSIMPTOL",
+          "type": "float:32.10"
+        },
+        {
+          "name": "MINSIMPTOL",
+          "type": "float:32.10"
+        }
+      ],
+      "sample_data": {
+        "VALUE_GSD": [
+          1.0,
+          5.0,
+          7.0,
+          8.0,
+          11.0
+        ],
+        "SHAPE_LENG": [
+          0.0454127,
+          0.0743136799999,
+          0.0459079799998,
+          0.05324976,
+          0.0307607
+        ],
+        "SHAPE_LE_1": [
+          0.0632322837607,
+          0.036201698544,
+          0.0460448329475,
+          0.0369558845319,
+          0.0254200103557
+        ],
+        "SHAPE_AREA": [
+          0.000100617839358,
+          6.36579646878e-05,
+          7.53111941457e-05,
+          0.000143752192565,
+          4.10472072256e-05
+        ],
+        "INPOLY_FID": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "SIMPGNFLAG": [
+          0
+        ],
+        "MAXSIMPTOL": [
+          0.000449661023038
+        ],
+        "MINSIMPTOL": [
+          0.000449661023038
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Calculate area",
+        "Dissolve by attribute",
+        "Union/Merge polygons",
+        "Simplify geometry",
+        "Calculate centroid",
+        "Zonal statistics (with raster)",
+        "Calculate statistics for: VALUE_GSD, SHAPE_LENG, SHAPE_LE_1",
+        "Choropleth mapping by: VALUE_GSD, SHAPE_LENG, SHAPE_LE_1"
+      ],
+      "crs": "EPSG:4326",
+      "geometry_type": "3D Polygon",
+      "feature_count": 177,
+      "bounds": [
+        -81.75063545036568,
+        30.294344419759227,
+        -81.55570434997571,
+        30.44110837994782
+      ],
+      "bounds_latlon": {
+        "west": -81.75063545036568,
+        "south": 30.294344419759227,
+        "east": -81.55570434997571,
+        "north": 30.44110837994782,
+        "formatted": "West: -81.750635, South: 30.294344, East: -81.555704, North: 30.441108"
+      }
+    },
+    {
+      "file_path": "/Users/shangdegao/PostGIS/roads.shp",
+      "file_name": "roads.shp",
+      "file_extension": ".shp",
+      "last_modified": "2025-12-19T11:56:48",
+      "data_type": "geospatial",
+      "file_size": {
+        "bytes": 532940,
+        "readable": "520.45 KB"
+      },
+      "format": ".shp",
+      "features": [
+        {
+          "name": "YEAR_",
+          "type": "int:11"
+        },
+        {
+          "name": "DISTRICT",
+          "type": "str:1"
+        },
+        {
+          "name": "COSITE",
+          "type": "str:24"
+        },
+        {
+          "name": "ROADWAY",
+          "type": "str:32"
+        },
+        {
+          "name": "DESC_FRM",
+          "type": "str:120"
+        },
+        {
+          "name": "DESC_TO",
+          "type": "str:120"
+        },
+        {
+          "name": "AADT",
+          "type": "float:32.10"
+        },
+        {
+          "name": "AADTFLG",
+          "type": "str:4"
+        },
+        {
+          "name": "KFLG",
+          "type": "str:4"
+        },
+        {
+          "name": "K100FLG",
+          "type": "str:4"
+        },
+        {
+          "name": "DFLG",
+          "type": "str:4"
+        },
+        {
+          "name": "TFLG",
+          "type": "str:4"
+        },
+        {
+          "name": "COUNTYDOT",
+          "type": "str:2"
+        },
+        {
+          "name": "COUNTY",
+          "type": "str:12"
+        },
+        {
+          "name": "MNG_DIST",
+          "type": "str:4"
+        },
+        {
+          "name": "BEGIN_POST",
+          "type": "float:32.10"
+        },
+        {
+          "name": "END_POST",
+          "type": "float:32.10"
+        },
+        {
+          "name": "KFCTR",
+          "type": "float:32.10"
+        },
+        {
+          "name": "K100FCTR",
+          "type": "float:32.10"
+        },
+        {
+          "name": "DFCTR",
+          "type": "float:32.10"
+        },
+        {
+          "name": "TFCTR",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPE_LENG",
+          "type": "float:32.10"
+        },
+        {
+          "name": "VOLUME",
+          "type": "float:32.10"
+        },
+        {
+          "name": "FID_",
+          "type": "int:11"
+        },
+        {
+          "name": "ROADWAY_1",
+          "type": "str:8"
+        },
+        {
+          "name": "ROAD_SIDE",
+          "type": "str:1"
+        },
+        {
+          "name": "DISTRICT_1",
+          "type": "str:1"
+        },
+        {
+          "name": "COUNTYDO_1",
+          "type": "str:2"
+        },
+        {
+          "name": "COUNTY_1",
+          "type": "str:12"
+        },
+        {
+          "name": "MNG_DIST_1",
+          "type": "str:4"
+        },
+        {
+          "name": "BEGIN_PO_1",
+          "type": "float:32.10"
+        },
+        {
+          "name": "END_POST_1",
+          "type": "float:32.10"
+        },
+        {
+          "name": "LANE_CNT",
+          "type": "float:32.10"
+        },
+        {
+          "name": "SHAPE_LE_1",
+          "type": "float:32.10"
+        }
+      ],
+      "sample_data": {
+        "YEAR_": [
+          2021
+        ],
+        "DISTRICT": [
+          "4"
+        ],
+        "COSITE": [
+          "865169",
+          "867109",
+          "867119",
+          "865064",
+          "865123"
+        ],
+        "ROADWAY": [
+          "86036500",
+          "86030000",
+          "86027500",
+          "86020000"
+        ],
+        "DESC_FRM": [
+          "N/A",
+          "SR 811/DIXIE HWY"
+        ],
+        "DESC_TO": [
+          "N/A",
+          "SR 811/DIXIE HWY",
+          "SR-816/OAKLAND PARK"
+        ],
+        "AADT": [
+          12000.0,
+          8200.0,
+          34000.0,
+          54000.0,
+          11800.0
+        ],
+        "AADTFLG": [
+          "F",
+          "C"
+        ],
+        "KFLG": [
+          "F"
+        ],
+        "K100FLG": [
+          "F"
+        ],
+        "DFLG": [
+          "F"
+        ],
+        "TFLG": [
+          "2",
+          "A",
+          "F"
+        ],
+        "COUNTYDOT": [
+          "86"
+        ],
+        "COUNTY": [
+          "Broward"
+        ],
+        "MNG_DIST": [
+          "4"
+        ],
+        "BEGIN_POST": [
+          0.0,
+          1.822,
+          2.981,
+          4.087,
+          13.871
+        ],
+        "END_POST": [
+          0.376,
+          2.668,
+          4.093,
+          5.471,
+          14.775
+        ],
+        "KFCTR": [
+          9.0
+        ],
+        "K100FCTR": [
+          0.0
+        ],
+        "DFCTR": [
+          53.8,
+          54.5
+        ],
+        "TFCTR": [
+          1.7,
+          5.2,
+          6.1,
+          14.3
+        ],
+        "SHAPE_LENG": [
+          609.9029,
+          1453.8438,
+          1366.445,
+          2234.4061,
+          1788.4418
+        ],
+        "VOLUME": [
+          27000.0,
+          17000.0,
+          2733.33333333,
+          6000.0,
+          11800.0
+        ],
+        "FID_": [
+          2051,
+          3066,
+          2163,
+          2635
+        ],
+        "ROADWAY_1": [
+          "86036500",
+          "86030000",
+          "86027500",
+          "86020000"
+        ],
+        "ROAD_SIDE": [
+          "R"
+        ],
+        "DISTRICT_1": [
+          "4"
+        ],
+        "COUNTYDO_1": [
+          "86"
+        ],
+        "COUNTY_1": [
+          "Broward"
+        ],
+        "MNG_DIST_1": [
+          "4"
+        ],
+        "BEGIN_PO_1": [
+          0.828,
+          0.0,
+          2.249,
+          0.927
+        ],
+        "END_POST_1": [
+          0.076,
+          1.624,
+          2.023,
+          6.496
+        ],
+        "LANE_CNT": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "SHAPE_LE_1": [
+          1928.194,
+          123.3058,
+          1125.748,
+          6830.4413
+        ]
+      },
+      "applicable_operations": [
+        "Spatial query/filter",
+        "Spatial join (with other layers)",
+        "Clip/Intersect (with boundary)",
+        "Buffer analysis",
+        "Reproject/Transform CRS",
+        "Export to different format",
+        "Calculate length",
+        "Merge/Dissolve lines",
+        "Split lines at intersections",
+        "Create points along line",
+        "Network analysis",
+        "Dissolve/Group by categorical attributes: DISTRICT, COSITE, ROADWAY",
+        "Symbolize by categories: DISTRICT, COSITE, ROADWAY",
+        "Calculate statistics for: YEAR_, AADT, BEGIN_POST",
+        "Choropleth mapping by: YEAR_, AADT, BEGIN_POST"
+      ],
+      "crs": "EPSG:4326",
+      "geometry_type": "LineString",
+      "feature_count": 1609,
+      "bounds": [
+        -80.88080938028897,
+        25.956655267352797,
+        -80.07572385411207,
+        26.35513411764196
+      ],
+      "bounds_latlon": {
+        "west": -80.88080938028897,
+        "south": 25.956655267352797,
+        "east": -80.07572385411207,
+        "north": 26.35513411764196,
+        "formatted": "West: -80.880809, South: 25.956655, East: -80.075724, North: 26.355134"
+      }
     }
   ],
-  "total_files": 6
+  "total_files": 8
 }
